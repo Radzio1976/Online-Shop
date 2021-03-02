@@ -25,9 +25,9 @@ class App extends react.Component {
     return(
       <div id="App">
         <BrowserRouter>
-        <Nav data={this.state.products} />
+        <Nav products={this.state.products} />
           <Switch>
-            <Route path='/' exact component={Home} />
+            <Route path='/' exact component={() => <Home products={this.state.products} />} />
             <Route path='/cart' component={Cart} />
           </Switch>
         </BrowserRouter>

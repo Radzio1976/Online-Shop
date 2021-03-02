@@ -7,7 +7,7 @@ class Nav extends React.Component {
     }
 
     render() {
-        const products = this.props.data;
+        const products = this.props.products;
 
         function saleProducts() {
             let saleProd = 0;

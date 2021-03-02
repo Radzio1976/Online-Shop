@@ -1,9 +1,14 @@
 import React from 'react';
+import HomeSortSection from './HomeSortSection';
+import HomeProductsSection from './HomeProductsSection';
 
 class Home extends React.Component {
     render() {
         return(
-            <h1>Home</h1>
+            <div id="Home">
+            <HomeSortSection />
+            <HomeProductsSection products={this.props.products} />
+            </div>
         )
     }
 }
