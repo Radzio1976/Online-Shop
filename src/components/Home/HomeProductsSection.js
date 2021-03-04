@@ -2,25 +2,63 @@ import React from 'react';
 
 class HomeProductsSection extends React.Component {
     state = {
+        products: [],
         productName: "",
         producerName: "",
         priceFrom: "",
         priceTo: "",
         orderBy: "",
-        limit: 16
+        limit: "16",
+        paginationCounter: 1,
+        firstProduct: 0,
+        lastProduct: 15,
+        productsPerPage: 1
+    }
+
+    componentDidMount() {
+        this.setState({
+            products: this.props.products
+        })
     }
 
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
+        }, () => {
+            if (this.state.limit === "16") {
+                this.setState({
+                    firstProduct: 0,
+                    lastProduct: 15
+                })
+            }
+            if (this.state.limit === "32") {
+                this.setState({
+                    firstProduct: 0,
+                    lastProduct: 31
+                })
+            }
+            if (this.state.limit === "64") {
+                this.setState({
+                    firstProduct: 0,
+                    lastProduct: 63
+                })
+            }
+        })
+    }
+
+
+    handlePage = (paginationIndex) => {
+        this.setState({
+            firstProduct: (paginationIndex * Number(this.state.limit)) - Number(this.state.limit),
+            lastProduct: (paginationIndex * Number(this.state.limit)) - 1
         })
     }
 
     render() {
-        console.log(this.state.priceFrom)
-        console.log(this.state.priceTo)
-        console.log(this.state.orderBy)
-        let products = this.props.products;
+        console.log(this.state.firstProduct)
+        console.log(this.state.lastProduct)
+        const {products} = this.state;
+        //let products = this.props.products;
 
         let producersNames = [];
 
@@ -65,12 +103,27 @@ class HomeProductsSection extends React.Component {
             } 
             return renderOfProducts          
         })
-        console.log(renderOfProducts) 
+
+
+
+        
+
+        // Część kodu poniżej odpowiada za wyświetlanie się przycisków paginacji
+        let paginationButtons = [];
+
+        if (renderOfProducts.length > this.state.limit) {
+            for (let i=0; i<Math.ceil(renderOfProducts.length / this.state.limit); i++) {
+                paginationButtons.push(i + 1)
+            }
+        } else {
+            console.log(false)
+        }
+        console.log(paginationButtons)
 
         return(
             <>
             <div className="HomeSortSection">
-                <div className="sort-by-product-name-container">
+            <div className="sort-by-product-name-container">
                     <label>Product Name
                         <input type="text" name="productName" value={this.state.productName} onChange={this.handleChange}></input>
                     </label>
@@ -123,41 +176,63 @@ class HomeProductsSection extends React.Component {
             <div className="HomeProductsSection">
                 {
                     renderOfProducts.map((product, index) => {
-                        return(
-                            index < this.state.limit ? <div key={product.id} className="product-container">
-                                 <div className="product-image-container">
-                                     <img src={product.thumbnail} alt={product.name}></img>
-                                 </div>
-                                 <div className="product-badges-container">
-                                 {
-                                        product.marks !== null ? product.marks.map((mark, index) => {
-                                             return(
-                                                 mark !== "CrossedPrice" ? <span key={index}>{mark}</span> : ""
-                                             )
-                                         }) : ""
-                                 }
-                                 </div>
-                                 <div className="product-name-container">
-                                     <h5>{product.producer}</h5>
-                                 </div>  
-                                 <div className="product-features=container">
-                                     <p>{product.name}</p>
-                                 </div>
-                                 <div className="product-buy-button-and-price-container">
-                                     <div className="buy-button-container">
-                                         <button>Buy</button>
-                                     </div>
-                                     <div className="price-container">
-                                         <p>{product.price} PLN</p>
-                                         {
-                                         product.oldPrice !== null ? <p style={{textDecoration: "line-through"}}>{product.oldPrice} PLN</p> : ""
-                                         }
-                                     </div>
-                                 </div>
-                             </div> : ""
-                         )
+
+
+
+                                    return(
+                                        index >= this.state.firstProduct && index <= this.state.lastProduct ? <div key={product.id} className="product-container">
+                                             <div className="product-image-container">
+                                                 <img src={product.thumbnail} alt={product.name}></img>
+                                             </div>
+                                             <div className="product-badges-container">
+                                             {
+                                                    product.marks !== null ? product.marks.map((mark, index) => {
+                                                         return(
+                                                             mark !== "CrossedPrice" ? <span key={index}>{mark}</span> : ""
+                                                         )
+                                                     }) : ""
+                                             }
+                                             </div>
+                                             <div className="product-name-container">
+                                                 <h5>{product.producer}</h5>
+                                             </div>  
+                                             <div className="product-features=container">
+                                                 <p>{product.name}</p>
+                                             </div>
+                                             <div className="product-buy-button-and-price-container">
+                                                 <div className="buy-button-container">
+                                                     <button>Buy</button>
+                                                 </div>
+                                                 <div className="price-container">
+                                                     <p>{product.price} PLN</p>
+                                                     {
+                                                     product.oldPrice !== null ? <p style={{textDecoration: "line-through"}}>{product.oldPrice} PLN</p> : ""
+                                                     }
+                                                 </div>
+                                             </div>
+                                         </div> : ""
+                                     )
+
+
+                       
+
                     })
                 }
+            </div>
+            <div className="HomePaginationSection">
+                <nav className="pagination-container">
+                    {paginationButtons.length > 1 ? <ul>
+                        <li>Previous</li>
+                        {
+                            paginationButtons.map((button, index) => {
+                                return(
+                                    <li key={index} onClick={() => this.handlePage(index + 1)}>{button}</li>
+                                )
+                            })
+                        }
+                        <li>Next</li>
+                    </ul> : ""}
+                </nav>
             </div>
             </>
         )
