@@ -17,7 +17,7 @@ class Home extends React.Component {
         return(
             <div id="Home">
             <HomeSortSection products={this.props.products} parentCallback={this.callbackFunction} />
-            <HomeProductsSection products={this.props.products} data={this.state} />
+            <HomeProductsSection products={this.props.products} appState={this.props.appState} />
             </div>
         )
     }

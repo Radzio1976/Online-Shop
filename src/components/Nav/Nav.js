@@ -4,7 +4,21 @@ import {withRouter} from 'react-router-dom';
 class Nav extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            samsungOrAppleSelected: false,
+            producerName: ""
+        }
     }
+
+    handleSamsungOrAppleProducts = (producer) => {
+        this.setState({
+            samsungOrAppleSelected: true,
+            producerName: producer
+        }, () => {
+            this.props.samsungOrAppleSelected(this.state.samsungOrAppleSelected, this.state.producerName)
+        })
+    }
+
 
     render() {
         const products = this.props.products;
@@ -49,8 +63,8 @@ class Nav extends React.Component {
                     <ul>
                         <li onClick={() => this.props.history.push('/')}>Homepage</li>
                         <li>On Sale <span>{saleProducts()}</span></li>
-                        <li>Samsung <span>{samsungProducts()}</span></li>
-                        <li>Apple <span>{appleProducts()}</span></li>
+                        <li onClick={() => this.handleSamsungOrAppleProducts("Samsung")}>Samsung<span>{samsungProducts()}</span></li>
+                        <li onClick={() => this.handleSamsungOrAppleProducts("Apple")}>Apple <span>{appleProducts()}</span></li>
                     </ul>
                 </nav>
                 <nav className="nav">

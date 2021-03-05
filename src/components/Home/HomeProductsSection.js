@@ -1,19 +1,21 @@
 import React from 'react';
 
 class HomeProductsSection extends React.Component {
-    state = {
-        products: [],
-        productName: "",
-        producerName: "",
-        priceFrom: "",
-        priceTo: "",
-        orderBy: "",
-        limit: "16",
-        paginationCounter: 1,
-        firstProduct: 0,
-        lastProduct: 15,
-        productsPerPage: 1
-    }
+        state = {
+            products: [],
+            productName: "",
+            producerName: this.props.appState.producerName,
+            priceFrom: "",
+            priceTo: "",
+            orderBy: "",
+            limit: "16",
+            paginationCounter: 1,
+            firstProduct: 0,
+            lastProduct: 15,
+            productsPerPage: 1,
+            samsungOrAppleSelected: false
+        }
+
 
     componentDidMount() {
         this.setState({
@@ -49,12 +51,41 @@ class HomeProductsSection extends React.Component {
 
     handlePage = (paginationIndex) => {
         this.setState({
+            paginationCounter: paginationIndex,
             firstProduct: (paginationIndex * Number(this.state.limit)) - Number(this.state.limit),
             lastProduct: (paginationIndex * Number(this.state.limit)) - 1
         })
     }
 
+    handlePrivious = () => {
+        if (this.state.paginationCounter > 1) {
+            this.setState({
+                paginationCounter: this.state.paginationCounter  - 1,
+                firstProduct: ((this.state.paginationCounter * Number(this.state.limit)) - Number(this.state.limit)) - Number(this.state.limit),
+                lastProduct: ((this.state.paginationCounter * Number(this.state.limit)) - 1) - Number(this.state.limit)
+            })
+        } else {
+            return
+        }
+    }
+
+    handleNext = (paginationButtons) => {
+        console.log(paginationButtons)
+        if (this.state.paginationCounter < paginationButtons.length) {
+            this.setState({
+                paginationCounter: this.state.paginationCounter  + 1,
+                firstProduct: ((this.state.paginationCounter * Number(this.state.limit)) - Number(this.state.limit)) + Number(this.state.limit),
+                lastProduct: ((this.state.paginationCounter * Number(this.state.limit)) - 1) + Number(this.state.limit)
+            })
+        } else {
+            return
+        }
+        
+    }
+
+
     render() {
+        console.log(this.state.producerName)
         console.log(this.state.firstProduct)
         console.log(this.state.lastProduct)
         const {products} = this.state;
@@ -120,6 +151,18 @@ class HomeProductsSection extends React.Component {
         }
         console.log(paginationButtons)
 
+        /*
+        let samsungOption;
+
+        if (this.state.samsungSelected === true) {                               
+            samsungOption = <option value="Name A-Z" selected>Name A-Z</option>                                
+        } else {
+            samsungOption = <option value="Name A-Z">Name A-Z</option> 
+        }
+        */
+        console.log(this.props.appState.samsungOrAppleSelected)
+
+
         return(
             <>
             <div className="HomeSortSection">
@@ -134,9 +177,9 @@ class HomeProductsSection extends React.Component {
                         <option value="">Choose ...</option>
                             {
                                  uniqueProducers.map((producer, index) => {
-                                    return(
-                                        <option key={index} value={producer}>{producer}</option>
-                                    )
+                                         return(
+                                            this.props.appState.samsungOrAppleSelected === true && producer === this.state.producerName ? <option key={index} value={producer} selected>{producer}</option> : <option key={index} value={producer}>{producer}</option>
+                                         )
                                 })
                             }
                         </select>
@@ -222,15 +265,16 @@ class HomeProductsSection extends React.Component {
             <div className="HomePaginationSection">
                 <nav className="pagination-container">
                     {paginationButtons.length > 1 ? <ul>
-                        <li>Previous</li>
+                        <li onClick={this.handlePrivious}>Previous</li>
                         {
-                            paginationButtons.map((button, index) => {
+                            paginationButtons.map((button, index, array) => {
+                                console.log(array)
                                 return(
-                                    <li key={index} onClick={() => this.handlePage(index + 1)}>{button}</li>
+                                    <li key={index} onClick={() => this.handlePage(index + 1)} style={{background: this.state.paginationCounter === index + 1 ? "blue" : "white"}}>{button}</li>
                                 )
                             })
                         }
-                        <li>Next</li>
+                        <li onClick={() => this.handleNext(paginationButtons)}>Next</li>
                     </ul> : ""}
                 </nav>
             </div>
