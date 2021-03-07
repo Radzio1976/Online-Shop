@@ -4,7 +4,8 @@ import HomeProductsSection from './HomeProductsSection';
 
 class Home extends React.Component {
     state = {
-        productName: ""
+        productName: "",
+        total: 0
     }
 
     callbackFunction = (childData) => {

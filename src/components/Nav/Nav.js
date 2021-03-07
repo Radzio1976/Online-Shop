@@ -1,12 +1,14 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
+import {AuthContext} from '../../App';
 
 class Nav extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             samsungOrAppleSelected: false,
-            producerName: ""
+            producerName: "",
+            total: localStorage.getItem("total")
         }
     }
 
@@ -58,7 +60,11 @@ class Nav extends React.Component {
         }
 
         return(
-            <div className="navigation">
+            <AuthContext.Consumer>
+                {
+                    ({appState}) => {
+                        return(
+<div className="navigation">
                 <nav className="nav">
                     <ul>
                         <li onClick={() => this.props.history.push('/')}>Homepage</li>
@@ -69,10 +75,14 @@ class Nav extends React.Component {
                 </nav>
                 <nav className="nav">
                     <ul>
-                        <li>Cart <span>{100} PLN</span></li>
+                        <li onClick={() => this.props.history.push('/cart')}>Cart <span>{appState.total} PLN</span></li>
                     </ul>
                 </nav>
             </div>
+                        )
+                    }
+                }
+            </AuthContext.Consumer>
         )
     }
 }

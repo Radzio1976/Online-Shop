@@ -1,4 +1,5 @@
 import React from 'react';
+import {AuthContext} from '../../App';
 
 class HomeProductsSection extends React.Component {
         state = {
@@ -13,7 +14,9 @@ class HomeProductsSection extends React.Component {
             firstProduct: 0,
             lastProduct: 15,
             productsPerPage: 1,
-            samsungOrAppleSelected: false
+            samsungOrAppleSelected: false,
+            basket: null,
+            total: 0
         }
 
 
@@ -70,7 +73,7 @@ class HomeProductsSection extends React.Component {
     }
 
     handleNext = (paginationButtons) => {
-        console.log(paginationButtons)
+        //console.log(paginationButtons)
         if (this.state.paginationCounter < paginationButtons.length) {
             this.setState({
                 paginationCounter: this.state.paginationCounter  + 1,
@@ -83,11 +86,26 @@ class HomeProductsSection extends React.Component {
         
     }
 
+    handleRemove = () => {
+        localStorage.removeItem("addedProducts")
+        localStorage.removeItem("total")
+    }
+
+
+
+    /*
+    handleSendTotal = (value) => {
+        console.log(value)
+    }
+
+*/
+
 
     render() {
-        console.log(this.state.producerName)
-        console.log(this.state.firstProduct)
-        console.log(this.state.lastProduct)
+        //console.log(this.state.basket)
+        //console.log(this.state.total)
+        //console.log(this.state.firstProduct)
+        //console.log(this.state.lastProduct)
         const {products} = this.state;
         //let products = this.props.products;
 
@@ -97,7 +115,7 @@ class HomeProductsSection extends React.Component {
             producersNames.push(products[i].producer)
         }
         const uniqueProducers = [...new Set(producersNames)]
-        console.log(uniqueProducers)
+        //console.log(uniqueProducers)
 
         if (this.state.orderBy === "Price 0-9") {
             products.sort((a, b) => {
@@ -149,7 +167,7 @@ class HomeProductsSection extends React.Component {
         } else {
             console.log(false)
         }
-        console.log(paginationButtons)
+        //console.log(paginationButtons)
 
         /*
         let samsungOption;
@@ -160,11 +178,15 @@ class HomeProductsSection extends React.Component {
             samsungOption = <option value="Name A-Z">Name A-Z</option> 
         }
         */
-        console.log(this.props.appState.samsungOrAppleSelected)
+        //console.log(this.props.appState.samsungOrAppleSelected)
 
 
         return(
-            <>
+            <AuthContext.Consumer>
+                {
+                    ({handleAddToBasket, showTotalPrice}) => {
+                        return(
+<>
             <div className="HomeSortSection">
             <div className="sort-by-product-name-container">
                     <label>Product Name
@@ -244,7 +266,8 @@ class HomeProductsSection extends React.Component {
                                              </div>
                                              <div className="product-buy-button-and-price-container">
                                                  <div className="buy-button-container">
-                                                     <button>Buy</button>
+                                                     <button onClick={() => handleAddToBasket(product)}>Buy</button>
+                                                     <button onClick={this.handleRemove}>Usuń</button>
                                                  </div>
                                                  <div className="price-container">
                                                      <p>{product.price} PLN</p>
@@ -268,7 +291,7 @@ class HomeProductsSection extends React.Component {
                         <li onClick={this.handlePrivious}>Previous</li>
                         {
                             paginationButtons.map((button, index, array) => {
-                                console.log(array)
+                                //console.log(array)
                                 return(
                                     <li key={index} onClick={() => this.handlePage(index + 1)} style={{background: this.state.paginationCounter === index + 1 ? "blue" : "white"}}>{button}</li>
                                 )
@@ -279,6 +302,10 @@ class HomeProductsSection extends React.Component {
                 </nav>
             </div>
             </>
+                        )
+                    }
+                }
+            </AuthContext.Consumer>
         )
     }
 }
