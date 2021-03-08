@@ -12,7 +12,7 @@ class App extends react.Component {
     products: [],
     samsungOrAppleSelected: false,
     producerName: "",
-    basket: null,
+    basket: [],
     total: 0
   }
 
@@ -21,7 +21,7 @@ class App extends react.Component {
     .then(res => {
       this.setState({
         products: res.data,
-        total: localStorage.getItem("total") === null ? 0 : localStorage.getItem("total"),
+        total: JSON.parse(localStorage.getItem("total")) === null ? 0 : JSON.parse(localStorage.getItem("total")),
         basket: JSON.parse(localStorage.getItem("addedProducts"))
       })
     })
@@ -71,12 +71,43 @@ class App extends react.Component {
     })
 }
 
+handleRemove = () => {
+  localStorage.removeItem("addedProducts")
+  localStorage.removeItem("total")
+  this.setState({
+    basket: JSON.parse(localStorage.getItem("addedProducts")),
+    total: 0
+  })
+}
+
+removeProduct = (productId, productPrice) => {
+  let basket = JSON.parse(localStorage.getItem("addedProducts"));
+  let total = JSON.parse(localStorage.getItem("total"));
+  
+  let index = 0;
+  index = basket.findIndex(product => product.id === productId)
+  if (index === -1) {
+    return
+  } else {
+    basket.splice(index, 1)
+    total = total - productPrice
+    localStorage.setItem("addedProducts", JSON.stringify(basket))
+
+    localStorage.setItem("total", JSON.stringify(total))
+    
+    this.setState({
+      basket,
+      total
+    })
+  }
+}
+
   render() {
     console.log(this.state.total)
     console.log(this.state.basket)
     //console.log(this.state.samsungSelected)
     return(
-      <AuthContext.Provider value={{appState: this.state, handleAddToBasket: this.handleAddToBasket}}>
+      <AuthContext.Provider value={{appState: this.state, handleAddToBasket: this.handleAddToBasket, handleRemove: this.handleRemove, removeProduct: this.removeProduct}}>
       <div id="App">
         <BrowserRouter>
         <Nav products={this.state.products} samsungOrAppleSelected={this.samsungOrAppleSelected}/>

@@ -15,7 +15,7 @@ class HomeProductsSection extends React.Component {
             lastProduct: 15,
             productsPerPage: 1,
             samsungOrAppleSelected: false,
-            basket: null,
+            basket: [],
             total: 0
         }
 
@@ -27,22 +27,23 @@ class HomeProductsSection extends React.Component {
     }
 
     handleChange = (e) => {
+        const {limit} = this.state;
         this.setState({
             [e.target.name]: e.target.value
         }, () => {
-            if (this.state.limit === "16") {
+            if (limit === "16") {
                 this.setState({
                     firstProduct: 0,
                     lastProduct: 15
                 })
             }
-            if (this.state.limit === "32") {
+            if (limit === "32") {
                 this.setState({
                     firstProduct: 0,
                     lastProduct: 31
                 })
             }
-            if (this.state.limit === "64") {
+            if (limit === "64") {
                 this.setState({
                     firstProduct: 0,
                     lastProduct: 63
@@ -53,19 +54,21 @@ class HomeProductsSection extends React.Component {
 
 
     handlePage = (paginationIndex) => {
+        const {limit} = this.state;
         this.setState({
             paginationCounter: paginationIndex,
-            firstProduct: (paginationIndex * Number(this.state.limit)) - Number(this.state.limit),
-            lastProduct: (paginationIndex * Number(this.state.limit)) - 1
+            firstProduct: (paginationIndex * Number(limit)) - Number(limit),
+            lastProduct: (paginationIndex * Number(limit)) - 1
         })
     }
 
     handlePrivious = () => {
-        if (this.state.paginationCounter > 1) {
+        const {paginationCounter, limit} = this.state;
+        if (paginationCounter > 1) {
             this.setState({
-                paginationCounter: this.state.paginationCounter  - 1,
-                firstProduct: ((this.state.paginationCounter * Number(this.state.limit)) - Number(this.state.limit)) - Number(this.state.limit),
-                lastProduct: ((this.state.paginationCounter * Number(this.state.limit)) - 1) - Number(this.state.limit)
+                paginationCounter: paginationCounter  - 1,
+                firstProduct: ((paginationCounter * Number(limit)) - Number(limit)) - Number(limit),
+                lastProduct: ((paginationCounter * Number(limit)) - 1) - Number(limit)
             })
         } else {
             return
@@ -73,12 +76,12 @@ class HomeProductsSection extends React.Component {
     }
 
     handleNext = (paginationButtons) => {
-        //console.log(paginationButtons)
-        if (this.state.paginationCounter < paginationButtons.length) {
+        const {paginationCounter, limit} = this.state;
+        if (paginationCounter < paginationButtons.length) {
             this.setState({
-                paginationCounter: this.state.paginationCounter  + 1,
-                firstProduct: ((this.state.paginationCounter * Number(this.state.limit)) - Number(this.state.limit)) + Number(this.state.limit),
-                lastProduct: ((this.state.paginationCounter * Number(this.state.limit)) - 1) + Number(this.state.limit)
+                paginationCounter: paginationCounter  + 1,
+                firstProduct: ((paginationCounter * Number(limit)) - Number(limit)) + Number(limit),
+                lastProduct: ((paginationCounter * Number(limit)) - 1) + Number(limit)
             })
         } else {
             return
@@ -86,28 +89,8 @@ class HomeProductsSection extends React.Component {
         
     }
 
-    handleRemove = () => {
-        localStorage.removeItem("addedProducts")
-        localStorage.removeItem("total")
-    }
-
-
-
-    /*
-    handleSendTotal = (value) => {
-        console.log(value)
-    }
-
-*/
-
-
     render() {
-        //console.log(this.state.basket)
-        //console.log(this.state.total)
-        //console.log(this.state.firstProduct)
-        //console.log(this.state.lastProduct)
-        const {products} = this.state;
-        //let products = this.props.products;
+        const {products, orderBy, productName, producerName, priceFrom, priceTo, limit, firstProduct, lastProduct, paginationCounter} = this.state;
 
         let producersNames = [];
 
@@ -115,27 +98,28 @@ class HomeProductsSection extends React.Component {
             producersNames.push(products[i].producer)
         }
         const uniqueProducers = [...new Set(producersNames)]
-        //console.log(uniqueProducers)
 
-        if (this.state.orderBy === "Price 0-9") {
+        uniqueProducers.sort()
+
+        if (orderBy === "Price 0-9") {
             products.sort((a, b) => {
                 return parseFloat(Number(a.price)) - parseFloat(Number(b.price))
             })
         }
 
-        if (this.state.orderBy === "Price 9-0") {
+        if (orderBy === "Price 9-0") {
             products.sort((a, b) => {
                 return parseFloat(Number(b.price)) - parseFloat(Number(a.price))
             })
         }
 
-        if (this.state.orderBy === "Name A-Z") {
+        if (orderBy === "Name A-Z") {
             products.sort((a, b) => {
                 return a.producer > b.producer ? 1 : -1
             })
         }
 
-        if (this.state.orderBy === "Name Z-A") {
+        if (orderBy === "Name Z-A") {
             products.sort((a, b) => {
                 return b.producer > a.producer ? 1 : -1
             })
@@ -145,8 +129,8 @@ class HomeProductsSection extends React.Component {
 
 
         products.map((value) => {
-            if (value.name.includes(this.state.productName) && value.producer.includes(this.state.producerName) && value.price >= this.state.priceFrom) {
-                if (value.price <= this.state.priceTo || this.state.priceTo === "") {                    
+            if (value.name.includes(productName) && value.producer.includes(producerName) && value.price >= priceFrom) {
+                if (value.price <= priceTo || priceTo === "") {                    
                     renderOfProducts.push(value)
                 }
             } 
@@ -160,37 +144,24 @@ class HomeProductsSection extends React.Component {
         // Część kodu poniżej odpowiada za wyświetlanie się przycisków paginacji
         let paginationButtons = [];
 
-        if (renderOfProducts.length > this.state.limit) {
-            for (let i=0; i<Math.ceil(renderOfProducts.length / this.state.limit); i++) {
+        if (renderOfProducts.length > limit) {
+            for (let i=0; i<Math.ceil(renderOfProducts.length / limit); i++) {
                 paginationButtons.push(i + 1)
             }
         } else {
             console.log(false)
         }
-        //console.log(paginationButtons)
-
-        /*
-        let samsungOption;
-
-        if (this.state.samsungSelected === true) {                               
-            samsungOption = <option value="Name A-Z" selected>Name A-Z</option>                                
-        } else {
-            samsungOption = <option value="Name A-Z">Name A-Z</option> 
-        }
-        */
-        //console.log(this.props.appState.samsungOrAppleSelected)
-
 
         return(
             <AuthContext.Consumer>
                 {
-                    ({handleAddToBasket, showTotalPrice}) => {
+                    ({handleAddToBasket, handleRemove}) => {
                         return(
 <>
             <div className="HomeSortSection">
             <div className="sort-by-product-name-container">
                     <label>Product Name
-                        <input type="text" name="productName" value={this.state.productName} onChange={this.handleChange}></input>
+                        <input type="text" name="productName" value={productName} onChange={this.handleChange}></input>
                     </label>
                 </div>
                 <div className="sort-by-producer-container">
@@ -200,7 +171,7 @@ class HomeProductsSection extends React.Component {
                             {
                                  uniqueProducers.map((producer, index) => {
                                          return(
-                                            this.props.appState.samsungOrAppleSelected === true && producer === this.state.producerName ? <option key={index} value={producer} selected>{producer}</option> : <option key={index} value={producer}>{producer}</option>
+                                            this.props.appState.samsungOrAppleSelected === true && producer === producerName ? <option key={index} value={producer} selected>{producer}</option> : <option key={index} value={producer}>{producer}</option>
                                          )
                                 })
                             }
@@ -209,12 +180,12 @@ class HomeProductsSection extends React.Component {
                 </div>
                 <div className="sort-by-price-from-container">
                     <label>Price From
-                    <input type="text" name="priceFrom" value={this.state.priceFrom} onChange={this.handleChange}></input>
+                    <input type="text" name="priceFrom" value={priceFrom} onChange={this.handleChange}></input>
                     </label>
                 </div>
                 <div className="sort-by-price-to-container">
                     <label>Price To
-                    <input type="text" name="priceTo" value={this.state.priceTo} onChange={this.handleChange}></input>
+                    <input type="text" name="priceTo" value={priceTo} onChange={this.handleChange}></input>
                     </label>
                 </div>
                 <div className="sort-by-order-by-container">
@@ -245,7 +216,7 @@ class HomeProductsSection extends React.Component {
 
 
                                     return(
-                                        index >= this.state.firstProduct && index <= this.state.lastProduct ? <div key={product.id} className="product-container">
+                                        index >= firstProduct && index <= lastProduct ? <div key={product.id} className="product-container">
                                              <div className="product-image-container">
                                                  <img src={product.thumbnail} alt={product.name}></img>
                                              </div>
@@ -267,7 +238,7 @@ class HomeProductsSection extends React.Component {
                                              <div className="product-buy-button-and-price-container">
                                                  <div className="buy-button-container">
                                                      <button onClick={() => handleAddToBasket(product)}>Buy</button>
-                                                     <button onClick={this.handleRemove}>Usuń</button>
+                                                     <button onClick={() => handleRemove()}>Usuń</button>
                                                  </div>
                                                  <div className="price-container">
                                                      <p>{product.price} PLN</p>
@@ -293,7 +264,7 @@ class HomeProductsSection extends React.Component {
                             paginationButtons.map((button, index, array) => {
                                 //console.log(array)
                                 return(
-                                    <li key={index} onClick={() => this.handlePage(index + 1)} style={{background: this.state.paginationCounter === index + 1 ? "blue" : "white"}}>{button}</li>
+                                    <li key={index} onClick={() => this.handlePage(index + 1)} style={{background: paginationCounter === index + 1 ? "blue" : "white"}}>{button}</li>
                                 )
                             })
                         }

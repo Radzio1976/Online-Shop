@@ -75,7 +75,7 @@ class Nav extends React.Component {
                 </nav>
                 <nav className="nav">
                     <ul>
-                        <li onClick={() => this.props.history.push('/cart')}>Cart <span>{appState.total} PLN</span></li>
+                        {appState.total > 0 ?<li onClick={() => this.props.history.push('/cart')}>Cart <span>{appState.total} PLN</span></li> : <li>Cart <span>{appState.total} PLN</span></li>}
                     </ul>
                 </nav>
             </div>
