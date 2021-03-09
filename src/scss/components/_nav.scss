@@ -1,9 +1,16 @@
 .navigation {
-    display: flex;
+    //display: flex;
+    position: fixed;
+    background-color: white;
+    width: 100%;
     color: #0150af;
-    box-shadow: 0 4px 2px -2px gray;
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(223,223,223,1);
+    -moz-box-shadow: 0px 0px 7px 1px rgba(223,223,223,1);
+    box-shadow: 0px 0px 7px 1px rgba(223,223,223,1);
+    float: left;
     .left-nav {
         width: 50%;
+        float: left;
         ul {
             display: flex;
             list-style-type: none;
