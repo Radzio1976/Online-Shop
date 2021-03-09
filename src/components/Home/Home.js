@@ -158,13 +158,13 @@ class HomeProductsSection extends React.Component {
                     ({handleAddToBasket}) => {
                         return(
                                 <div id="Home">
-<div className="HomeSortSection">
-            <div className="sort-by-product-name-container">
-                    <label>Product Name
-                        <input type="text" name="productName" value={productName} onChange={this.handleChange}></input>
-                    </label>
-                </div>
-                <div className="sort-by-producer-container">
+                                    <div className="HomeSortSection">
+                                    <div className="sort-container sort-by-product-name-container">
+                                        <label>Product Name
+                                            <input type="text" name="productName" value={productName} onChange={this.handleChange}></input>
+                                        </label>
+                                    </div>
+                <div className="sort-container sort-by-producer-container">
                 <label>Producer
                         <select type="text" name="producerName" onChange={this.handleChange}>
                         <option value="">Choose ...</option>
@@ -178,17 +178,17 @@ class HomeProductsSection extends React.Component {
                         </select>
                     </label>
                 </div>
-                <div className="sort-by-price-from-container">
+                <div className="sort-container sort-by-price-from-container">
                     <label>Price From
                     <input type="text" name="priceFrom" value={priceFrom} onChange={this.handleChange}></input>
                     </label>
                 </div>
-                <div className="sort-by-price-to-container">
+                <div className="sort-container sort-by-price-to-container">
                     <label>Price To
                     <input type="text" name="priceTo" value={priceTo} onChange={this.handleChange}></input>
                     </label>
                 </div>
-                <div className="sort-by-order-by-container">
+                <div className="sort-container sort-by-order-by-container">
                     <label>Order By
                     <select type="text" name="orderBy" onChange={this.handleChange}>
                         <option value="">Featured</option>
@@ -199,7 +199,7 @@ class HomeProductsSection extends React.Component {
                     </select>
                     </label>
                 </div>
-                <div className="sort-by-limit-container">
+                <div className="sort-container sort-by-limit-container">
                     <label>Order By
                     <select type="text" name="limit" onChange={this.handleChange}>
                         <option value="16">16</option>
@@ -243,8 +243,8 @@ class HomeProductsSection extends React.Component {
                                                      }
                                                  </div>
                                              </div>
-                                         </div> : ""
-                                     )
+            </div> : ""
+                         )
                     })
                 }
             </div>

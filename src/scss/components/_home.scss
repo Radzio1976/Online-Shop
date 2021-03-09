@@ -1,0 +1,25 @@
+#Home {
+    width: 100%;
+}
+
+.HomeSortSection {
+    margin: 0 auto;
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    width: 80%;
+    .sort-container {
+        label {
+            display: block;
+            margin-top: 15px;
+            select, input {
+                display: block;
+                margin-top: 15px;
+                height: 30px;
+                border: 1px solid grey;
+                border-radius: 4px;
+                width: 180px;
+            }
+        }
+    }
+}

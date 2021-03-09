@@ -1,5 +1,9 @@
+@import "./settings/reset";
+@import "./settings/fonts";
 @import "./components//nav";
+@import "./components/home";
 
 body {
-    font-family: 'Roboto', sans-serif;
+    max-width: 1920px;
+    font-family: $font-base;
 }

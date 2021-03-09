@@ -64,21 +64,21 @@ class Nav extends React.Component {
                 {
                     ({appState}) => {
                         return(
-<div className="navigation">
-                <nav className="nav">
-                    <ul>
-                        <li onClick={() => this.props.history.push('/')}>Homepage</li>
-                        <li>On Sale <span>{saleProducts()}</span></li>
-                        <li onClick={() => this.handleSamsungOrAppleProducts("Samsung")}>Samsung<span>{samsungProducts()}</span></li>
-                        <li onClick={() => this.handleSamsungOrAppleProducts("Apple")}>Apple <span>{appleProducts()}</span></li>
-                    </ul>
-                </nav>
-                <nav className="nav">
-                    <ul>
-                        {appState.total > 0 ?<li onClick={() => this.props.history.push('/cart')}>Cart <span>{appState.total} PLN</span></li> : <li>Cart <span>{appState.total} PLN</span></li>}
-                    </ul>
-                </nav>
-            </div>
+                            <div className="navigation">
+                            <nav className="left-nav">
+                                <ul>
+                                    <li onClick={() => this.props.history.push('/')}>Homepage</li>
+                                    <li>On Sale <span>{saleProducts()}</span></li>
+                                    <li onClick={() => this.handleSamsungOrAppleProducts("Samsung")}>Samsung<span>{samsungProducts()}</span></li>
+                                    <li onClick={() => this.handleSamsungOrAppleProducts("Apple")}>Apple <span>{appleProducts()}</span></li>
+                                </ul>
+                            </nav>
+                            <nav className="right-nav">
+                                <ul>
+                                    {appState.total > 0 ?<li onClick={() => this.props.history.push('/cart')}>Cart <span>{appState.total} PLN</span></li> : <li>Cart <span>{appState.total} PLN</span></li>}
+                                </ul>
+                            </nav>
+                        </div>
                         )
                     }
                 }
