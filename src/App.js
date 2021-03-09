@@ -71,15 +71,6 @@ class App extends react.Component {
     })
 }
 
-handleRemove = () => {
-  localStorage.removeItem("addedProducts")
-  localStorage.removeItem("total")
-  this.setState({
-    basket: JSON.parse(localStorage.getItem("addedProducts")),
-    total: 0
-  })
-}
-
 removeProduct = (productId, productPrice) => {
   let basket = JSON.parse(localStorage.getItem("addedProducts"));
   let total = JSON.parse(localStorage.getItem("total"));
