@@ -3,16 +3,18 @@ import {withRouter} from 'react-router-dom';
 import {AuthContext} from '../../App';
 
 class Nav extends React.Component {
-
         state = {
             samsungOrAppleSelected: false,
             producerName: "",
             total: localStorage.getItem("total")
         }
 
-
     resetSorts = () => {
         this.props.resetAllSorts()
+    }
+
+    handleSaleProducts = () => {
+        this.props.productsOnSale()
     }
 
     handleSamsungOrAppleProducts = (producer) => {
@@ -72,7 +74,7 @@ class Nav extends React.Component {
                                 <ul>
                                     <li onClick={() => {this.resetSorts()
                                                         this.props.history.push('/')}}>Homepage</li>
-                                    <li>On Sale <span>{saleProducts()}</span></li>
+                                    <li onClick={() => this.handleSaleProducts()}>On Sale <span>{saleProducts()}</span></li>
                                     <li onClick={() => {this.handleSamsungOrAppleProducts("Samsung")
                                                         this.props.history.push('/')}}>Samsung<span>{samsungProducts()}</span></li>
                                     <li onClick={() => {this.handleSamsungOrAppleProducts("Apple")

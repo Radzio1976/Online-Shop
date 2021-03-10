@@ -9,6 +9,7 @@ const AuthContext = createContext();
 
 class App extends react.Component {
   state = {
+    mainBaseOfProducts: [],
     products: [],
     samsungOrAppleSelected: false,
     producerName: "",
@@ -21,6 +22,7 @@ class App extends react.Component {
     axios.get('https://simko.it/themes/simko-it/assets/products.json')
     .then(res => {
       this.setState({
+        mainBaseOfProducts: res.data,
         products: res.data,
         total: JSON.parse(localStorage.getItem("total")) === null ? 0 : JSON.parse(localStorage.getItem("total")),
         basket: JSON.parse(localStorage.getItem("addedProducts"))
@@ -34,12 +36,31 @@ class App extends react.Component {
 
   resetAllSorts = () => {
     this.setState({
+      products: this.state.mainBaseOfProducts,
       productName: "",
       producerName: this.state.productName,
       priceFrom: "",
       priceTo: "",
       orderBy: "",
       limit: "16",
+      paginationCounter: 1
+    })
+  }
+
+  productsOnSale = () => {
+    const mainBaseOfProducts = this.state.mainBaseOfProducts;
+    let onSale = [];
+    for (let i=0; i<mainBaseOfProducts.length; i++) {
+      if (mainBaseOfProducts[i].marks !== null) {
+        for (let k=0; k<mainBaseOfProducts[i].marks.length; k++) {
+          if (mainBaseOfProducts[i].marks[k] === "Sale") {            
+            onSale.push(mainBaseOfProducts[i])
+            }
+          }         
+        } 
+    }
+    this.setState({
+      products: onSale
     })
   }
 
@@ -107,15 +128,11 @@ removeProduct = (productId, productPrice) => {
 }
 
   render() {
-    console.log(this.state.productName)
-    //console.log(this.state.total)
-    //console.log(this.state.basket)
-    //console.log(this.state.samsungSelected)
     return(
       <AuthContext.Provider value={{appState: this.state, handleAddToBasket: this.handleAddToBasket, handleRemove: this.handleRemove, removeProduct: this.removeProduct}}>
       <div id="App">
         <BrowserRouter>
-        <Nav products={this.state.products} samsungOrAppleSelected={this.samsungOrAppleSelected} resetAllSorts={this.resetAllSorts}/>
+        <Nav products={this.state.products} samsungOrAppleSelected={this.samsungOrAppleSelected} resetAllSorts={this.resetAllSorts} productsOnSale={this.productsOnSale} />
           <Switch>
             <Route path='/' exact component={() => <Home products={this.state.products} appState={this.state}/>} />
             <Route path='/cart' component={() => <Cart  appState={this.state} />} />

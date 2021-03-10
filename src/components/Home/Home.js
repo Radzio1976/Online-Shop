@@ -138,10 +138,6 @@ class HomeProductsSection extends React.Component {
         })
 
 
-
-        
-
-        // Część kodu poniżej odpowiada za wyświetlanie się przycisków paginacji
         let paginationButtons = [];
 
         if (renderOfProducts.length > limit) {
@@ -181,9 +177,6 @@ class HomeProductsSection extends React.Component {
             }
         } 
 
-
-
-
         return(
             <AuthContext.Consumer>
                 {
@@ -196,79 +189,79 @@ class HomeProductsSection extends React.Component {
                                             <input type="text" name="productName" value={productName} onChange={this.handleChange}></input>
                                         </label>
                                     </div>
-                <div className="sort-container sort-by-producer-container">
-                <label>Producer
-                        <select type="text" name="producerName" onChange={this.handleChange}>
-                        <option value="">Choose ...</option>
-                            {
-                                 uniqueProducers.map((producer, index) => {
-                                         return(
-                                            this.props.appState.samsungOrAppleSelected === true && producer === producerName ? <option key={index} value={producer} selected>{producer}</option> : <option key={index} value={producer}>{producer}</option>
-                                         )
-                                })
-                            }
-                        </select>
-                    </label>
-                </div>
-                <div className="sort-container sort-by-price-from-container">
-                    <label>Price From
-                    <input type="text" name="priceFrom" value={priceFrom} onChange={this.handleChange}></input>
-                    </label>
-                </div>
-                <div className="sort-container sort-by-price-to-container">
-                    <label>Price To
-                    <input type="text" name="priceTo" value={priceTo} onChange={this.handleChange}></input>
-                    </label>
-                </div>
-                <div className="sort-container sort-by-order-by-container">
-                    <label>Order By
-                    <select type="text" name="orderBy" onChange={this.handleChange}>
-                        <option value="">Featured</option>
-                        <option value="Price 0-9">Price 0-9</option>
-                        <option value="Price 9-0">Price 9-0</option>
-                        <option value="Name A-Z">Name A-Z</option>
-                        <option value="Name Z-A">Name Z-A</option>
-                    </select>
-                    </label>
-                </div>
-                <div className="sort-container sort-by-limit-container">
-                    <label>Order By
-                    <select type="text" name="limit" onChange={this.handleChange}>
-                        <option value="16">16</option>
-                        <option value="32">32</option>
-                        <option value="64">64</option>
-                    </select>
-                    </label>
-                </div>
-            </div>
-            <div className="HomeProductsSection">
-                {
-                    renderOfProducts.map((product, index) => {
-                                    return(
-                                        index >= firstProduct && index <= lastProduct ? <div key={product.id} className="product-container" style={productStyle(index)}>
-                                             <div className="product-image-container">
-                                                 <img src={product.image} alt={product.name}></img>
-                                             </div>
-                                             <div className="product-badges-container">
-                                             {
+                                    <div className="sort-container sort-by-producer-container">
+                                        <label>Producer
+                                            <select type="text" name="producerName" onChange={this.handleChange}>
+                                                <option value="">Choose ...</option>
+                                                    {
+                                                    uniqueProducers.map((producer, index) => {
+                                                    return(
+                                                            this.props.appState.samsungOrAppleSelected === true && producer === producerName ? <option key={index} value={producer} selected>{producer}</option> : <option key={index} value={producer}>{producer}</option>
+                                                        )
+                                                    })
+                                                    }
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div className="sort-container sort-by-price-from-container">
+                                        <label>Price From
+                                            <input type="text" name="priceFrom" value={priceFrom} onChange={this.handleChange}></input>
+                                        </label>
+                                    </div>
+                                    <div className="sort-container sort-by-price-to-container">
+                                        <label>Price To
+                                            <input type="text" name="priceTo" value={priceTo} onChange={this.handleChange}></input>
+                                        </label>
+                                    </div>
+                                    <div className="sort-container sort-by-order-by-container">
+                                        <label>Order By
+                                            <select type="text" name="orderBy" onChange={this.handleChange}>
+                                                <option value="">Featured</option>
+                                                <option value="Price 0-9">Price 0-9</option>
+                                                <option value="Price 9-0">Price 9-0</option>
+                                                <option value="Name A-Z">Name A-Z</option>
+                                                <option value="Name Z-A">Name Z-A</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div className="sort-container sort-by-limit-container">
+                                        <label>Order By
+                                            <select type="text" name="limit" onChange={this.handleChange}>
+                                                <option value="16">16</option>
+                                                <option value="32">32</option>
+                                                <option value="64">64</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div className="HomeProductsSection">
+                                    {
+                                        renderOfProducts.map((product, index) => {
+                                                        return(
+                                                            index >= firstProduct && index <= lastProduct ? <div key={product.id} className="product-container" style={productStyle(index)}>
+                                    <div className="product-image-container">
+                                        <img src={product.image} alt={product.name}></img>
+                                            </div>
+                                            <div className="product-badges-container">
+                                            {
                                                     product.marks !== null ? product.marks.map((mark, index) => {
                                                          return(
                                                              mark !== "CrossedPrice" ? <span key={index} style={badgesBackground(mark)}>{mark}</span> : ""
                                                          )
                                                      }) : ""
                                              }
-                                             </div>
-                                             <div className="product-name-container">
+                                            </div>
+                                            <div className="product-name-container">
                                                  <h5>{product.producer}</h5>
-                                             </div>  
-                                             <div className="product-features-container">
+                                            </div>  
+                                            <div className="product-features-container">
                                                  <p>{product.name}</p>
-                                             </div>
-                                             <div className="product-buy-button-and-price-container">
-                                                 <div className="buy-button-container">
+                                            </div>
+                                            <div className="product-buy-button-and-price-container">
+                                                <div className="buy-button-container">
                                                      <button onClick={() => handleAddToBasket(product)}>Buy</button>
-                                                 </div>
-                                                 <div className="price-container">
+                                                </div>
+                                                <div className="price-container">
                                                      {
                                                       product.oldPrice == null ? <p className="price" style={{color: "black"}}>{product.price} PLN</p> : 
                                                       <p className="price">{product.price} PLN</p>
@@ -277,30 +270,29 @@ class HomeProductsSection extends React.Component {
                                                      {
                                                      product.oldPrice !== null ? <p style={{textDecoration: "line-through"}}>{product.oldPrice} PLN</p> : ""
                                                      }
-                                                 </div>
-                                             </div>
-            </div> : ""
-                         )
-                    })
-                }
-            </div>
-            <div className="HomePaginationSection">
-                <nav className="pagination-container">
-                    {paginationButtons.length > 1 ? <ul>
-                        <li onClick={this.handlePrivious}>Previous</li>
-                        {
-                            paginationButtons.map((button, index, array) => {
-                                //console.log(array)
-                                return(
-                                    <li key={index} onClick={() => this.handlePage(index + 1)} style={{background: paginationCounter === index + 1 ? "#0c5acf" : "white", color: paginationCounter === index + 1 ? "white" : ""}}>{button}</li>
-                                )
-                            })
-                        }
-                        <li onClick={() => this.handleNext(paginationButtons)}>Next</li>
-                    </ul> : ""}
-                </nav>
-            </div>
-            </div>            
+                                                </div>
+                                            </div>
+                                </div> : ""
+                                            )
+                                        })
+                                    }
+                                </div>
+                                <div className="HomePaginationSection">
+                                    <nav className="pagination-container">
+                                        {paginationButtons.length > 1 ? <ul>
+                                            <li onClick={this.handlePrivious}>Previous</li>
+                                            {
+                                                paginationButtons.map((button, index, array) => {
+                                                    return(
+                                            <li key={index} onClick={() => this.handlePage(index + 1)} style={{background: paginationCounter === index + 1 ? "#0c5acf" : "white", color: paginationCounter === index + 1 ? "white" : ""}}>{button}</li>
+                                                    )
+                                                })
+                                            }
+                                            <li onClick={() => this.handleNext(paginationButtons)}>Next</li>
+                                        </ul> : ""}
+                                    </nav>
+                                </div>
+                            </div>            
                         )
                     }
                 }

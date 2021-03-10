@@ -78,7 +78,7 @@ class Cart extends React.Component {
                                                         <td className="table-first-column">{index + 1}.</td>
                                                         <td className="table-second-column">
                                                             <div className="product-image-and-name-container">
-                                                                <div><img src={product.thumbnail} alt=""></img></div>
+                                                                <div><img src={product.thumbnail} alt={product.name}></img></div>
                                                                 <div className="name-and-features-container">
                                                                     <div className="product-badges-container">
                                                                         {
@@ -98,10 +98,7 @@ class Cart extends React.Component {
                                                         })}
                                                         </div>
                                                             </div>
-                                                        </td>
-
-
-                                                       
+                                                        </td>                                                      
                                                         <td className="table-third-column">
                                                             <div>
                                                                 <p style={{color: "red"}}>{(product.price).toFixed(2)}</p>
