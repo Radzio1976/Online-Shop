@@ -74,7 +74,8 @@ class Nav extends React.Component {
                                 <ul>
                                     <li onClick={() => {this.resetSorts()
                                                         this.props.history.push('/')}}>Homepage</li>
-                                    <li onClick={() => this.handleSaleProducts()}>On Sale <span>{saleProducts()}</span></li>
+                                    <li onClick={() => {this.handleSaleProducts()
+                                                        this.props.history.push('/')}}>On Sale <span>{saleProducts()}</span></li>
                                     <li onClick={() => {this.handleSamsungOrAppleProducts("Samsung")
                                                         this.props.history.push('/')}}>Samsung<span>{samsungProducts()}</span></li>
                                     <li onClick={() => {this.handleSamsungOrAppleProducts("Apple")
