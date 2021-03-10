@@ -13,7 +13,8 @@ class App extends react.Component {
     samsungOrAppleSelected: false,
     producerName: "",
     basket: [],
-    total: 0
+    total: 0,
+    productName: ""
   }
 
   componentDidMount() {
@@ -27,6 +28,18 @@ class App extends react.Component {
     })
     .catch(err => {
       console.log("Nie udało się pobrać bazy produktów", err)
+    })
+  }
+
+
+  resetAllSorts = () => {
+    this.setState({
+      productName: "",
+      producerName: this.state.productName,
+      priceFrom: "",
+      priceTo: "",
+      orderBy: "",
+      limit: "16",
     })
   }
 
@@ -94,16 +107,17 @@ removeProduct = (productId, productPrice) => {
 }
 
   render() {
-    console.log(this.state.total)
-    console.log(this.state.basket)
+    console.log(this.state.productName)
+    //console.log(this.state.total)
+    //console.log(this.state.basket)
     //console.log(this.state.samsungSelected)
     return(
       <AuthContext.Provider value={{appState: this.state, handleAddToBasket: this.handleAddToBasket, handleRemove: this.handleRemove, removeProduct: this.removeProduct}}>
       <div id="App">
         <BrowserRouter>
-        <Nav products={this.state.products} samsungOrAppleSelected={this.samsungOrAppleSelected}/>
+        <Nav products={this.state.products} samsungOrAppleSelected={this.samsungOrAppleSelected} resetAllSorts={this.resetAllSorts}/>
           <Switch>
-            <Route path='/' exact component={() => <Home products={this.state.products} appState={this.state} />} />
+            <Route path='/' exact component={() => <Home products={this.state.products} appState={this.state}/>} />
             <Route path='/cart' component={() => <Cart  appState={this.state} />} />
           </Switch>
         </BrowserRouter>

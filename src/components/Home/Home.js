@@ -269,7 +269,11 @@ class HomeProductsSection extends React.Component {
                                                      <button onClick={() => handleAddToBasket(product)}>Buy</button>
                                                  </div>
                                                  <div className="price-container">
-                                                     <p className="price">{product.price} PLN</p>
+                                                     {
+                                                      product.oldPrice == null ? <p className="price" style={{color: "black"}}>{product.price} PLN</p> : 
+                                                      <p className="price">{product.price} PLN</p>
+                                                     }
+                                    
                                                      {
                                                      product.oldPrice !== null ? <p style={{textDecoration: "line-through"}}>{product.oldPrice} PLN</p> : ""
                                                      }
