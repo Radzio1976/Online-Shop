@@ -60,7 +60,8 @@ class App extends react.Component {
         } 
     }
     this.setState({
-      products: onSale
+      products: onSale,
+      producerName: ""
     })
   }
 
