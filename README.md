@@ -4,7 +4,7 @@
 
 ### `git clone --branch master https://github.com/Radzio1976/Online-Shop.git`
 
-3. Open terminal in file of downloaded repository
+3. Open terminal in folder of downloaded repository
 
 4. Install npm modules using command:
 
