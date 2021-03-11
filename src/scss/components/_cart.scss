@@ -26,6 +26,9 @@
         background: #0362d4;
         color: white;
     }
+    button:hover {
+        background-color: navy;
+    }
 }
 
 .table-first-column {
@@ -69,7 +72,7 @@
             border-bottom: 2px solid #dee2e6; 
         }
         button {
-            width: 54px;
+            width: 70px;
             height: 27px;
             cursor: pointer;
             font-size: 16px;
@@ -78,6 +81,9 @@
             border-radius: 6px;
             background: #0362d4;
             color: white;
+        }
+        button:hover {
+            background-color: navy;
         }
         .product-image-and-name-container {
             display: flex;

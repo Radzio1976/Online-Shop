@@ -109,7 +109,7 @@ class Cart extends React.Component {
                                                             </td>
                                                         <td className="table-fourth-column">x {quantity(product.id)}</td>
                                                         <td className="table-fifth-column">{(quantity(product.id) * product.price).toFixed(2)} PLN</td>
-                                                        <td className="table-sixth-column"><button onClick={() => removeProduct(product.id, product.price)}>Usuń</button></td>
+                                                        <td className="table-sixth-column"><button onClick={() => removeProduct(product.id, product.price)}>Remove</button></td>
                                                     </tr>
                                                 )
                                             })
