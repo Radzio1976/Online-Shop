@@ -127,9 +127,9 @@ class HomeProductsSection extends React.Component {
         
         let renderOfProducts = [];
 
-
+        
         products.map((value) => {
-            if (value.name.includes(productName) && value.producer.includes(producerName) && value.price >= priceFrom) {
+            if (value.name.toLowerCase().includes(productName.toLowerCase()) && value.producer.includes(producerName) && value.price >= priceFrom) {
                 if (value.price <= priceTo || priceTo === "") {                    
                     renderOfProducts.push(value)
                 }
