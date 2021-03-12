@@ -89,9 +89,7 @@ class App extends react.Component {
   getProductsByProducer = (value) => {
     const mainBaseOfProducts = this.state.mainBaseOfProducts;
     let productsByProducer = mainBaseOfProducts.filter(product => {
-      if (product.producer === value) {
         return product.producer === value
-      }
     })
     this.setState({
       products: productsByProducer
@@ -102,9 +100,7 @@ class App extends react.Component {
   getProductsByProducerQty = (value) => {
     const mainBaseOfProducts = this.state.mainBaseOfProducts;
     let productsByProducerQty = mainBaseOfProducts.filter(product => {
-      if (product.producer === value) {
         return product.producer === value
-      }
     })
     return productsByProducerQty.length
   }
