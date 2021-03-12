@@ -225,7 +225,7 @@ class HomeProductsSection extends React.Component {
                                         </label>
                                     </div>
                                     <div className="sort-container sort-by-limit-container">
-                                        <label>Order By
+                                        <label>Limit
                                             <select type="text" name="limit" onChange={this.handleChange}>
                                                 <option value="16">16</option>
                                                 <option value="32">32</option>
