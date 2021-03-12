@@ -18,7 +18,8 @@ class App extends react.Component {
     priceTo: "",
     orderBy: "",
     limit: 16,
-    paginationCounter: 1
+    paginationCounter: 1,
+    total: 0
   }
 
   componentDidMount() {
@@ -50,7 +51,6 @@ class App extends react.Component {
   }
 
   getOnSaleQty = (value) => {
-    console.log(value)
     const mainBaseOfProducts = this.state.mainBaseOfProducts;
     
     let sum = 0;
@@ -69,7 +69,6 @@ class App extends react.Component {
   handleSaleProducts = (value) => {
     const mainBaseOfProducts = this.state.mainBaseOfProducts;
     
-    console.log(mainBaseOfProducts)
     let onSale = [];
     for (let i=0; i<mainBaseOfProducts.length; i++) {
       if (mainBaseOfProducts[i].marks !== null) {
@@ -115,11 +114,10 @@ class App extends react.Component {
 
 
   render() { 
-    console.log(this.state.mainBaseOfProducts)
         // Tworzenie tablicy z unikalnymi nazwami producentów
         const products = this.state.products;
         const {limit} = this.state;
-        //console.log(products)
+
         let producersNames = [];
     
         for (let i=0; i<products.length; i++) {
@@ -128,7 +126,6 @@ class App extends react.Component {
         const uniqueProducers = [...new Set(producersNames)]
     
         uniqueProducers.sort()
-        console.log(uniqueProducers)
 
         // Tworzenie tablicy z przyciskami paginacji
         let paginationButtons = [];
