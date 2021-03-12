@@ -11,14 +11,18 @@ render() {
  return(
   <AuthContext.Consumer>
    {
-    ({appState}) => {
+    ({appState, resetSorts, handleSaleProducts, getOnSaleQty, getProductsByProducer, getProductsByProducerQty}) => {
         return(
     <nav className="left-nav">
      <ul>
-      <li>Homepage</li>
-      <li>On Sale <span>10</span></li>
-      <li>Samsung<span>20</span></li>
-      <li>Apple <span>30</span></li>
+      <li onClick={() => {resetSorts()
+                          this.props.history.push('/')}}>Homepage</li>
+      <li onClick={() => {handleSaleProducts("Sale")
+                          this.props.history.push('/')}}>On Sale <span>{getOnSaleQty("Sale")}</span></li>
+      <li onClick={() => {getProductsByProducer("Samsung")
+                          this.props.history.push('/')}}>Samsung<span>{getProductsByProducerQty("Samsung")}</span></li>
+      <li onClick={() => {getProductsByProducer("Apple")
+                          this.props.history.push('/')}}>Apple <span>{getProductsByProducerQty("Apple")}</span></li>
      </ul>
     </nav>
             )
