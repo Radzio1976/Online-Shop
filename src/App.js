@@ -11,9 +11,8 @@ class App extends react.Component {
   state = {
     mainBaseOfProducts: [],
     products: [],
-    producersNames: [],
     productName: "",
-    producerName: "",
+    producer: "",
     priceFrom: "",
     priceTo: "",
     orderBy: "",
@@ -33,7 +32,12 @@ class App extends react.Component {
     .catch(err => {
       console.log("Nie udało się pobrać bazy produktów", err)
     })
+  }
 
+  handleChange = (key, value) => {
+    this.setState({
+      [key]: value
+    })
   }
 
   resetSorts = () => {
@@ -41,7 +45,7 @@ class App extends react.Component {
     this.setState({
       products: mainBaseOfProducts,
       productName: "",
-      producerName: "",
+      producer: "",
       priceFrom: "",
       priceTo: "",
       orderBy: "",
@@ -116,9 +120,10 @@ class App extends react.Component {
 
         let producersNames = [];
     
-        for (let i=0; i<products.length; i++) {
-            producersNames.push(products[i].producer)
-        }
+        products.forEach((product, index) => {
+          producersNames.push(product.producer)
+        })
+  
         const uniqueProducers = [...new Set(producersNames)]
     
         uniqueProducers.sort()
@@ -136,7 +141,7 @@ class App extends react.Component {
 
 
     return(
-      <AuthContext.Provider value={{appState: this.state, resetSorts: this.resetSorts, getOnSaleQty: this.getOnSaleQty, handleSaleProducts: this.handleSaleProducts, getProductsByProducer: this.getProductsByProducer, getProductsByProducerQty: this.getProductsByProducerQty}}>
+      <AuthContext.Provider value={{appState: this.state, handleChange: this.handleChange, resetSorts: this.resetSorts, getOnSaleQty: this.getOnSaleQty, handleSaleProducts: this.handleSaleProducts, getProductsByProducer: this.getProductsByProducer, getProductsByProducerQty: this.getProductsByProducerQty}}>
       <div id="App">
         <BrowserRouter>
         <Nav />

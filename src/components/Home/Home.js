@@ -1,6 +1,6 @@
 import React from 'react';
 import {AuthContext} from '../../App';
-import HomeSortSection from './HomeSortSection';
+import HomeSortSection from './HomeSortSection/HomeSortSection';
 
 class HomeProductsSection extends React.Component {
         state = {
@@ -75,7 +75,7 @@ class HomeProductsSection extends React.Component {
                     ({appState, handleAddToBasket}) => {
                         return(
                                 <div id="Home">
-                                    <HomeSortSection uniqueProducers={this.props.uniqueProducers}/>
+                                    <HomeSortSection uniqueProducers={this.props.uniqueProducers} />
                                 <div className="HomeProductsSection">
                                     {
                                         appState.products.map((product, index) => {
