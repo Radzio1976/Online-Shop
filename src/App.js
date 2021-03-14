@@ -18,6 +18,9 @@ class App extends react.Component {
     orderBy: "",
     limit: 16,
     paginationCounter: 1,
+    firstProduct: 0,
+    lastProduct: 15,
+    basket: [],
     total: 0
   }
 
@@ -109,6 +112,33 @@ class App extends react.Component {
     return productsByProducerQty.length
   }
 
+  productStyle = (index) => {
+      if (index % 4 === 0) {
+        return {marginRight: "3.33%"}
+    }
+    
+    if (index % 4 === 1) {
+        return {marginLeft: "3.33%", marginRight: "3.33%"}
+    }
+    
+    if (index % 4 === 2) {
+        return {marginLeft: "3.33%", marginRight: "3.33%"}
+    }
+    
+    if (index % 4 === 3) {
+        return {marginLeft: "3.33%"}
+    }
+  }
+
+  badgesBackground = (mark) => {
+      if (mark === "LastItems") {
+        return {background: "#ffc539"}
+    }
+    if (mark === "Sale" || mark === "Promotion" || mark === "Bestseller") {
+        return {background: "red", color: "white"}
+    }
+  }
+
  
   
 
@@ -141,7 +171,7 @@ class App extends react.Component {
 
 
     return(
-      <AuthContext.Provider value={{appState: this.state, handleChange: this.handleChange, resetSorts: this.resetSorts, getOnSaleQty: this.getOnSaleQty, handleSaleProducts: this.handleSaleProducts, getProductsByProducer: this.getProductsByProducer, getProductsByProducerQty: this.getProductsByProducerQty}}>
+      <AuthContext.Provider value={{appState: this.state, handleChange: this.handleChange, resetSorts: this.resetSorts, getOnSaleQty: this.getOnSaleQty, handleSaleProducts: this.handleSaleProducts, getProductsByProducer: this.getProductsByProducer, getProductsByProducerQty: this.getProductsByProducerQty, productStyle: this.productStyle, badgesBackground: this.badgesBackground}}>
       <div id="App">
         <BrowserRouter>
         <Nav />
