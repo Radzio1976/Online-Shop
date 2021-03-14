@@ -1,5 +1,4 @@
 import React from 'react';
-import react from 'react';
 import {AuthContext} from '../../../App';
 
 class HomePaginationSection extends React.Component{
