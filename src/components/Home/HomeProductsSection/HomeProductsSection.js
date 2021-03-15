@@ -5,7 +5,7 @@ class HomeProductsSection extends React.Component{
     render() {
         return(
             <div className="HomeProductsSection">
-                <HomeProductSection />
+                <HomeProductSection products={this.props.products} />
             </div>
         )
     }

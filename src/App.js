@@ -16,7 +16,7 @@ class App extends react.Component {
     priceFrom: "",
     priceTo: "",
     orderBy: "",
-    limit: 16,
+    limit: "16",
     paginationCounter: 1,
     firstProduct: 0,
     lastProduct: 15,
@@ -38,9 +38,11 @@ class App extends react.Component {
   }
 
   handleChange = (key, value) => {
+    console.log(key)
+    console.log(value)
     this.setState({
       [key]: value
-    })
+    }) 
   }
 
   resetSorts = () => {
@@ -112,6 +114,19 @@ class App extends react.Component {
     return productsByProducerQty.length
   }
 
+  lastProduct = () => {
+    const {limit} = this.state;
+    if (limit === "16") {
+      return 15
+    }
+    if (limit === "32") {
+      return 31
+    }
+    if (limit === "64") {
+      return 63
+    }
+  }
+
   productStyle = (index) => {
       if (index % 4 === 0) {
         return {marginRight: "3.33%"}
@@ -139,24 +154,53 @@ class App extends react.Component {
     }
   }
 
- 
-  
-
-
   render() { 
+    //console.log(this.state.firstProduct)
+    console.log(this.state.productName)
         // Tworzenie tablicy z unikalnymi nazwami producentów
-        const products = this.state.products;
-        const {limit} = this.state;
+        const {mainBaseOfProducts, orderBy, productName, producer, priceFrom, priceTo, limit, firstProduct, lastProduct, paginationCounter} = this.state;
+        let products = this.state.products;
+        //const {limit} = this.state;
+
+        if (orderBy === "Price 0-9") {
+          products.sort((a, b) => {
+              return parseFloat(Number(a.price)) - parseFloat(Number(b.price))
+          })
+      }
+
+      if (orderBy === "Price 9-0") {
+          products.sort((a, b) => {
+              return parseFloat(Number(b.price)) - parseFloat(Number(a.price))
+          })
+      }
+
+      if (orderBy === "Name A-Z") {
+          products.sort((a, b) => {
+              return a.producer > b.producer ? 1 : -1
+          })
+      }
+
+      if (orderBy === "Name Z-A") {
+          products.sort((a, b) => {
+              return b.producer > a.producer ? 1 : -1
+          })
+      } 
+
+
+        let sortedProducts = products.filter(product => {
+          return product.name.toLowerCase().includes(productName.toLowerCase()) && product.producer.includes(producer) && product.price >= Number(priceFrom) && (product.price <= Number(priceTo) || priceTo === "")
+        })
+        products = sortedProducts
 
         let producersNames = [];
     
-        products.forEach((product, index) => {
+        mainBaseOfProducts.forEach((product, index) => {
           producersNames.push(product.producer)
         })
   
         const uniqueProducers = [...new Set(producersNames)]
     
-        uniqueProducers.sort()
+        uniqueProducers.sort();
 
         // Tworzenie tablicy z przyciskami paginacji
         let paginationButtons = [];
@@ -171,12 +215,12 @@ class App extends react.Component {
 
 
     return(
-      <AuthContext.Provider value={{appState: this.state, handleChange: this.handleChange, resetSorts: this.resetSorts, getOnSaleQty: this.getOnSaleQty, handleSaleProducts: this.handleSaleProducts, getProductsByProducer: this.getProductsByProducer, getProductsByProducerQty: this.getProductsByProducerQty, productStyle: this.productStyle, badgesBackground: this.badgesBackground}}>
+      <AuthContext.Provider value={{appState: this.state, products: this.products, handleChange: this.handleChange, resetSorts: this.resetSorts, getOnSaleQty: this.getOnSaleQty, handleSaleProducts: this.handleSaleProducts, getProductsByProducer: this.getProductsByProducer, getProductsByProducerQty: this.getProductsByProducerQty, lastProduct: this.lastProduct, productStyle: this.productStyle, badgesBackground: this.badgesBackground}}>
       <div id="App">
         <BrowserRouter>
         <Nav />
           <Switch>
-            <Route path='/' exact component={() => <Home uniqueProducers={uniqueProducers} paginationButtons={paginationButtons} />} />
+            <Route path='/' exact component={() => <Home products={products} uniqueProducers={uniqueProducers} paginationButtons={paginationButtons} />} />
             <Route path='/cart' component={() => <Cart />} />
           </Switch>
         </BrowserRouter>

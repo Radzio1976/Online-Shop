@@ -11,13 +11,14 @@ class HomeProductSection extends React.Component{
         return(
             <AuthContext.Consumer>
                 {
-                    ({appState, productStyle}) => {
+                    ({appState, lastProduct, productStyle}) => {
+
                         return(
                             <>
                             {
-                                appState.products.map((product, index) => {
+                                this.props.products.map((product, index) => {
                                                 return(
-                                                    index >= appState.firstProduct && index <= appState.lastProduct ? 
+                                                    index >= appState.firstProduct && index <= lastProduct() ? 
                                 <div key={product.id} className="product-container" style={productStyle(index)}>
                                     <HomeProductImageSection product={product} />
                                     <HomeProductBadgesSection product={product} />

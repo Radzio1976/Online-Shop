@@ -29,7 +29,7 @@ class Home extends React.Component {
                         return(
                                 <div id="Home">
                                     <HomeSortSection uniqueProducers={this.props.uniqueProducers} />
-                                    <HomeProductsSection />
+                                    <HomeProductsSection products={this.props.products} />
                                     <HomePaginationSection paginationButtons={this.props.paginationButtons} />
                             </div>            
                         )
