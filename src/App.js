@@ -17,6 +17,7 @@ class App extends react.Component {
     priceTo: "",
     orderBy: "",
     limit: "16",
+    producerSelected: false,
     paginationCounter: 1,
     firstProduct: 0,
     lastProduct: 15,
@@ -29,7 +30,17 @@ class App extends react.Component {
     .then(res => {
       this.setState({
         mainBaseOfProducts: res.data,
-        products: res.data
+        products: res.data,
+        basket: JSON.parse(localStorage.getItem("addedProducts")) === null ? [] : JSON.parse(localStorage.getItem("addedProducts"))
+      })
+    })
+    .then(() => {
+      let sum = 0;
+      this.state.basket.forEach(productInBasket => {
+        sum += productInBasket.price
+      })
+      this.setState({
+        total: sum
       })
     })
     .catch(err => {
@@ -38,7 +49,6 @@ class App extends react.Component {
   }
 
   handleChange = (key, value) => {
-    const {limit} = this.state;
     console.log(key)
     console.log(value)
     this.setState({
@@ -97,8 +107,15 @@ class App extends react.Component {
   }
 
   handleSaleProducts = (value) => {
-    const mainBaseOfProducts = this.state.mainBaseOfProducts;
+    this.setState({
+      producer: "",
+      limit: "16",
+      firstProduct: 0,
+      lastProduct: 15
+    })
+    let mainBaseOfProducts = this.state.mainBaseOfProducts;
     
+    console.log(mainBaseOfProducts)
     let onSale = [];
     for (let i=0; i<mainBaseOfProducts.length; i++) {
       if (mainBaseOfProducts[i].marks !== null) {
@@ -110,18 +127,28 @@ class App extends react.Component {
         } 
     }
     
+    console.log(onSale)
+    
     this.setState({
       products: onSale
     })
-    
   }
 
   getProductsByProducer = (value) => {
+    this.setState({
+      producer: "",
+      limit: "16",
+      firstProduct: 0,
+      lastProduct: 15
+    })
+    //this.resetSorts()
     const mainBaseOfProducts = this.state.mainBaseOfProducts;
     let productsByProducer = mainBaseOfProducts.filter(product => {
         return product.producer === value
     })
     this.setState({
+      producerSelected: true,
+      producer: value,
       products: productsByProducer
     })
     console.log(productsByProducer)
@@ -133,31 +160,6 @@ class App extends react.Component {
         return product.producer === value
     })
     return productsByProducerQty.length
-  }
-
-  lastProduct = () => {
-    const {limit} = this.state;
-    if (limit === "16") {
-      this.setState({
-        firstProduct: 0,
-        lastProduct: 15
-    })
-      //return 15
-    }
-    if (limit === "32") {
-      this.setState({
-        firstProduct: 0,
-        lastProduct: 31
-    })
-      //return 31
-    }
-    if (limit === "64") {
-      this.setState({
-        firstProduct: 0,
-        lastProduct: 63
-    })
-      //return 63
-    }
   }
 
   productStyle = (index) => {
@@ -195,9 +197,9 @@ class App extends react.Component {
         firstProduct: (paginationIndex * Number(limit)) - Number(limit),
         lastProduct: (paginationIndex * Number(limit)) - 1
     })
-}
+  }
 
-handlePrivious = () => {
+handlePrevious = () => {
     const {paginationCounter, limit} = this.state;
     if (paginationCounter > 1) {
         this.setState({
@@ -224,13 +226,73 @@ handleNext = (paginationButtons) => {
     
 }
 
+handleAddToBasket = (product) => {
+
+  this.setState({
+      basket: JSON.parse(localStorage.getItem("addedProducts")) === null ? [] : JSON.parse(localStorage.getItem("addedProducts"))
+  }, () => {
+
+      let basket = this.state.basket;
+      console.log(this.state.basket)
+
+      if (basket === []) {
+          basket.push(product)
+
+         localStorage.setItem("addedProducts", JSON.stringify(basket))
+      } else {
+          basket.push(product);
+
+          localStorage.setItem("addedProducts", JSON.stringify(basket))
+      }
+
+      let sum = 0;
+
+      basket.forEach(productInBasket => {
+        sum += productInBasket.price
+      })
+
+      this.setState({
+          basket,
+          total: sum
+      })
+  })
+  console.log(this.state.total)
+}
+
+removeProducts = () => {
+  localStorage.removeItem("addedProducts")
+}
+
+removeProduct = (productId, productPrice) => {
+  let basket = this.state.basket
+  let {total} = this.state;
+  let index = 0;
+  index = basket.findIndex(product => product.id === productId)
+  if (index === -1) {
+    return
+  } else {
+    basket.splice(index, 1)
+    total = total - productPrice
+    if (total === 0) {
+      localStorage.removeItem("addedProducts")
+    } else {
+      localStorage.setItem("addedProducts", JSON.stringify(basket))
+    }
+    
+    this.setState({
+      basket,
+      total
+    })
+  }
+}
+
   render() { 
-    //console.log(this.state.firstProduct)
-    //console.log(this.state.productName)
+    console.log(this.state.products)
+
         // Tworzenie tablicy z unikalnymi nazwami producentów
-        const {mainBaseOfProducts, orderBy, productName, producer, priceFrom, priceTo, limit, firstProduct, lastProduct, paginationCounter} = this.state;
+        const {mainBaseOfProducts, orderBy, productName, producer, priceFrom, priceTo, limit} = this.state;
         let products = this.state.products;
-        //const {limit} = this.state;
+        let basket = this.state.basket;
 
         if (orderBy === "Price 0-9") {
           products.sort((a, b) => {
@@ -283,15 +345,34 @@ handleNext = (paginationButtons) => {
             console.log(false)
         }
 
+        const uniqueProductsInBasket = Array.from(new Set(basket.map(product => product.id)))
+        .map(id => {
+          return basket.find(product => product.id === id)
+        })
+        //console.log(uniqueProductsInBasket)
+
+
+        const quantity = (productId) => {
+          const basket = this.state.basket;
+          console.log(basket)
+            let qty = 0;
+            for (let i=0; i<basket.length; i++) {
+                if (basket[i].id === productId) {
+                  qty += 1
+                }
+            }
+            return qty
+          }
+
 
     return(
-      <AuthContext.Provider value={{appState: this.state, products: this.products, handleChange: this.handleChange, resetSorts: this.resetSorts, getOnSaleQty: this.getOnSaleQty, handleSaleProducts: this.handleSaleProducts, getProductsByProducer: this.getProductsByProducer, getProductsByProducerQty: this.getProductsByProducerQty, lastProduct: this.lastProduct, productStyle: this.productStyle, badgesBackground: this.badgesBackground, handlePage: this.handlePage, handlePrivious: this.handlePrivious, handleNext: this.handleNext}}>
+      <AuthContext.Provider value={{appState: this.state, products: this.products, handleChange: this.handleChange, resetSorts: this.resetSorts, getOnSaleQty: this.getOnSaleQty, handleSaleProducts: this.handleSaleProducts, getProductsByProducer: this.getProductsByProducer, getProductsByProducerQty: this.getProductsByProducerQty, lastProduct: this.lastProduct, productStyle: this.productStyle, badgesBackground: this.badgesBackground, handlePage: this.handlePage, handlePrevious: this.handlePrevious, handleNext: this.handleNext, handleAddToBasket: this.handleAddToBasket, removeProducts: this.removeProducts, removeProduct: this.removeProduct}}>
       <div id="App">
         <BrowserRouter>
         <Nav />
           <Switch>
             <Route path='/' exact component={() => <Home products={products} uniqueProducers={uniqueProducers} paginationButtons={paginationButtons} />} />
-            <Route path='/cart' component={() => <Cart />} />
+            <Route path='/cart' component={() => <Cart  uniqueProductsInBasket={uniqueProductsInBasket} quantity={quantity}/>} />
           </Switch>
         </BrowserRouter>
       </div>

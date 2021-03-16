@@ -2,55 +2,11 @@ import React from 'react';
 import {AuthContext} from '../../App';
 
 class Cart extends React.Component {
-        state = {
-            basket: [],
-            total: 0
-        }
-
-
-
-    componentDidMount() {
-        this.setState({
-            basket: JSON.parse(localStorage.getItem("addedProducts")),
-            total: JSON.parse(localStorage.getItem("total"))
-        })
-        
-    }
-
-    render() {
-        let basket = this.state.basket
-
-        console.log(basket)
-
-            const uniqueProducts = Array.from(new Set(basket.map(product => product.id)))
-            .map(id => {
-              return basket.find(product => product.id === id)
-            })
-
-        const quantity = (productId) => {
-
-            let qty = 0;
-            for (let i=0; i<basket.length; i++) {
-                if (basket[i].id === productId) {
-                  qty += 1
-                }
-            }
-            return qty
-        }
-
-        const badgesBackground = (mark) => {
-            if (mark === "LastItems") {
-                return {background: "#ffc539"}
-            }
-            if (mark === "Sale" || mark === "Promotion" || mark === "Bestseller") {
-                return {background: "red", color: "white"}
-            }
-        } 
-        
+    render() {       
         return(
             <AuthContext.Consumer>
                 {
-                    ({appState, removeProduct}) => {
+                    ({appState, removeProduct, badgesBackground}) => {
                         return(
                             <div className="Cart">   
                             {appState.total === 0 ?
@@ -72,7 +28,7 @@ class Cart extends React.Component {
                                     </thead>
                                     <tbody>
                                     {
-                                            uniqueProducts.map((product, index) => {
+                                            this.props.uniqueProductsInBasket.map((product, index) => {
                                                 return(
                                                     <tr key={index}>
                                                         <td className="table-first-column">{index + 1}.</td>
@@ -107,8 +63,8 @@ class Cart extends React.Component {
                                             }   
                                                             </div>
                                                             </td>
-                                                        <td className="table-fourth-column">x {quantity(product.id)}</td>
-                                                        <td className="table-fifth-column">{(quantity(product.id) * product.price).toFixed(2)} PLN</td>
+                                                        <td className="table-fourth-column">x {this.props.quantity(product.id)}</td>
+                                                        <td className="table-fifth-column">{(this.props.quantity(product.id) * product.price).toFixed(2)} PLN</td>
                                                         <td className="table-sixth-column"><button onClick={() => removeProduct(product.id, product.price)}>Remove</button></td>
                                                     </tr>
                                                 )
@@ -117,7 +73,7 @@ class Cart extends React.Component {
                                     </tbody>
                                 </table>
                                 <div className="cart-total">
-                                    <p>Total <span>{(this.state.total).toFixed(2)} PLN</span></p>
+                                    <p>Total <span>{(appState.total).toFixed(2)} PLN</span></p>
                                 </div>
                                 </>
                             }                            

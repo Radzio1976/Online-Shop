@@ -13,7 +13,7 @@ class SortByProducerSelectSection extends React.Component{
                                     {
                                     this.props.uniqueProducers.map((producer, index) => {
                                     return(
-                                            <option key={index}>{producer}</option>
+                                        appState.producerSelected === true && producer === appState.producer ? <option key={index} selected>{producer}</option> : <option key={index}>{producer}</option>
                                         )
                                     })
                                     }
