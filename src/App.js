@@ -38,11 +38,32 @@ class App extends react.Component {
   }
 
   handleChange = (key, value) => {
+    const {limit} = this.state;
     console.log(key)
     console.log(value)
     this.setState({
       [key]: value
-    }) 
+    }, () => {
+      console.log(value)
+      if (value === "16") {
+          this.setState({
+              firstProduct: 0,
+              lastProduct: 15
+          })
+      }
+      if (value === "32") {
+          this.setState({
+              firstProduct: 0,
+              lastProduct: 31
+          })
+      }
+      if (value === "64") {
+          this.setState({
+              firstProduct: 0,
+              lastProduct: 63
+          })
+      }
+  }) 
   }
 
   resetSorts = () => {
@@ -117,13 +138,25 @@ class App extends react.Component {
   lastProduct = () => {
     const {limit} = this.state;
     if (limit === "16") {
-      return 15
+      this.setState({
+        firstProduct: 0,
+        lastProduct: 15
+    })
+      //return 15
     }
     if (limit === "32") {
-      return 31
+      this.setState({
+        firstProduct: 0,
+        lastProduct: 31
+    })
+      //return 31
     }
     if (limit === "64") {
-      return 63
+      this.setState({
+        firstProduct: 0,
+        lastProduct: 63
+    })
+      //return 63
     }
   }
 
@@ -154,9 +187,46 @@ class App extends react.Component {
     }
   }
 
+  handlePage = (paginationIndex) => {
+    console.log(paginationIndex)
+    const {limit} = this.state;
+    this.setState({
+        paginationCounter: paginationIndex,
+        firstProduct: (paginationIndex * Number(limit)) - Number(limit),
+        lastProduct: (paginationIndex * Number(limit)) - 1
+    })
+}
+
+handlePrivious = () => {
+    const {paginationCounter, limit} = this.state;
+    if (paginationCounter > 1) {
+        this.setState({
+            paginationCounter: paginationCounter  - 1,
+            firstProduct: ((paginationCounter * Number(limit)) - Number(limit)) - Number(limit),
+            lastProduct: ((paginationCounter * Number(limit)) - 1) - Number(limit)
+        })
+    } else {
+        return
+    }
+}
+
+handleNext = (paginationButtons) => {
+    const {paginationCounter, limit} = this.state;
+    if (paginationCounter < paginationButtons.length) {
+        this.setState({
+            paginationCounter: paginationCounter  + 1,
+            firstProduct: ((paginationCounter * Number(limit)) - Number(limit)) + Number(limit),
+            lastProduct: ((paginationCounter * Number(limit)) - 1) + Number(limit)
+        })
+    } else {
+        return
+    }
+    
+}
+
   render() { 
     //console.log(this.state.firstProduct)
-    console.log(this.state.productName)
+    //console.log(this.state.productName)
         // Tworzenie tablicy z unikalnymi nazwami producentów
         const {mainBaseOfProducts, orderBy, productName, producer, priceFrom, priceTo, limit, firstProduct, lastProduct, paginationCounter} = this.state;
         let products = this.state.products;
@@ -215,7 +285,7 @@ class App extends react.Component {
 
 
     return(
-      <AuthContext.Provider value={{appState: this.state, products: this.products, handleChange: this.handleChange, resetSorts: this.resetSorts, getOnSaleQty: this.getOnSaleQty, handleSaleProducts: this.handleSaleProducts, getProductsByProducer: this.getProductsByProducer, getProductsByProducerQty: this.getProductsByProducerQty, lastProduct: this.lastProduct, productStyle: this.productStyle, badgesBackground: this.badgesBackground}}>
+      <AuthContext.Provider value={{appState: this.state, products: this.products, handleChange: this.handleChange, resetSorts: this.resetSorts, getOnSaleQty: this.getOnSaleQty, handleSaleProducts: this.handleSaleProducts, getProductsByProducer: this.getProductsByProducer, getProductsByProducerQty: this.getProductsByProducerQty, lastProduct: this.lastProduct, productStyle: this.productStyle, badgesBackground: this.badgesBackground, handlePage: this.handlePage, handlePrivious: this.handlePrivious, handleNext: this.handleNext}}>
       <div id="App">
         <BrowserRouter>
         <Nav />

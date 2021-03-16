@@ -7,19 +7,19 @@ class HomePaginationUlSection extends React.Component{
         return(
             <AuthContext.Consumer>
                 {
-                    ({appState}) => {
+                    ({appState, handlePage, handlePrivious, handleNext}) => {
                         return(
                             <>
                                 {paginationButtons.length > 1 ? <ul>
-                                    <li onClick={this.handlePrivious}>Previous</li>
+                                    <li onClick={() => handlePrivious}>Previous</li>
                                     {
                                         paginationButtons.map((button, index, array) => {
                                             return(
-                                    <li key={index} onClick={() => this.handlePage(index + 1)} style={{background: appState.paginationCounter === index + 1 ? "#0c5acf" : "white", color: appState.paginationCounter === index + 1 ? "white" : ""}}>{button}</li>
+                                    <li key={index} onClick={() => handlePage(index + 1)} style={{background: appState.paginationCounter === index + 1 ? "#0c5acf" : "white", color: appState.paginationCounter === index + 1 ? "white" : ""}}>{button}</li>
                                             )
                                         })
                                     }
-                                    <li onClick={() => this.handleNext(paginationButtons)}>Next</li>
+                                    <li onClick={() => handleNext(paginationButtons)}>Next</li>
                                 </ul> : ""}
                             </>
                         )
