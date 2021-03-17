@@ -84,7 +84,7 @@ class App extends react.Component {
   }) 
   }
 
-  resetSorts = () => {
+  resetAllSorts = () => {
     const mainBaseOfProducts = this.state.mainBaseOfProducts;
     this.setState({
       products: mainBaseOfProducts,
@@ -95,6 +95,16 @@ class App extends react.Component {
       orderBy: "",
       limit: "16",
       paginationCounter: 1
+    })
+  }
+
+  resetSorts = () => {
+    this.setState({
+      producer: "",
+      limit: "16",
+      paginationCounter: 1,
+      firstProduct: 0,
+      lastProduct: 15
     })
   }
 
@@ -115,12 +125,7 @@ class App extends react.Component {
   }
 
   handleSaleProducts = (value) => {
-    this.setState({
-      producer: "",
-      limit: "16",
-      firstProduct: 0,
-      lastProduct: 15
-    })
+    this.resetSorts()
     let mainBaseOfProducts = this.state.mainBaseOfProducts;
     
     console.log(mainBaseOfProducts)
@@ -143,12 +148,7 @@ class App extends react.Component {
   }
 
   getProductsByProducer = (value) => {
-    this.setState({
-      producer: "",
-      limit: "16",
-      firstProduct: 0,
-      lastProduct: 15
-    })
+    this.resetSorts()
     //this.resetSorts()
     const mainBaseOfProducts = this.state.mainBaseOfProducts;
     let productsByProducer = mainBaseOfProducts.filter(product => {
@@ -376,7 +376,7 @@ removeProduct = (productId, productPrice) => {
 
 
     return(
-      <AuthContext.Provider value={{appState: this.state, products: this.products, handleChange: this.handleChange, resetSorts: this.resetSorts, getOnSaleQty: this.getOnSaleQty, handleSaleProducts: this.handleSaleProducts, getProductsByProducer: this.getProductsByProducer, getProductsByProducerQty: this.getProductsByProducerQty, lastProduct: this.lastProduct, productStyle: this.productStyle, badgesBackground: this.badgesBackground, handlePage: this.handlePage, handlePrevious: this.handlePrevious, handleNext: this.handleNext, handleAddToBasket: this.handleAddToBasket, removeProducts: this.removeProducts, removeProduct: this.removeProduct}}>
+      <AuthContext.Provider value={{appState: this.state, products: this.products, handleChange: this.handleChange, resetAllSorts: this.resetAllSorts, getOnSaleQty: this.getOnSaleQty, handleSaleProducts: this.handleSaleProducts, getProductsByProducer: this.getProductsByProducer, getProductsByProducerQty: this.getProductsByProducerQty, lastProduct: this.lastProduct, productStyle: this.productStyle, badgesBackground: this.badgesBackground, handlePage: this.handlePage, handlePrevious: this.handlePrevious, handleNext: this.handleNext, handleAddToBasket: this.handleAddToBasket, removeProducts: this.removeProducts, removeProduct: this.removeProduct}}>
       <div id="App">
         <BrowserRouter>
         <Nav />
