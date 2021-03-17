@@ -9,7 +9,8 @@
     display: flex;
     padding: 10px 0 40px 0;
     justify-content: space-between;
-    .sort-container {
+    .sort-container { 
+        width: 12%;
         label {
             display: block;
             margin-top: 15px;
@@ -19,7 +20,7 @@
                 height: 30px;
                 border: 1px solid grey;
                 border-radius: 4px;
-                width: 180px;
+                width: 100%;          
             }
         }
     }
@@ -112,10 +113,25 @@
         list-style-type: none;
         li {
             padding: 12px 13px;
-            border: 1px solid #ededed;
+            border-top: 1px solid #ededed;
+            border-left: 1px solid #ededed;
+            border-bottom: 1px solid #ededed;
+            border-right: 0px solid #ededed;
             border-radius: 3px;
             cursor: pointer;
             color: #0362d4;
+        }
+        li:first-child {
+            border-top: 1px solid #ededed;
+            border-left: 1px solid #ededed;
+            border-bottom: 1px solid #ededed;
+            border-right: 0px;
+        }
+        li:last-child {
+            border-top: 1px solid #ededed;
+            border-left: 1px solid #ededed;
+            border-bottom: 1px solid #ededed;
+            border-right: 1px solid #ededed;;
         }
         li:hover {
             background: #e9ecef;
