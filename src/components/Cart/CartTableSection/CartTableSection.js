@@ -1,5 +1,5 @@
 import React from 'react';
-import {AuthContext} from '../../App';
+import {AuthContext} from '../../../App';
 
 class CartTableSection extends React.Component {
     render() {       

@@ -382,7 +382,7 @@ removeProduct = (productId, productPrice) => {
         <Nav />
           <Switch>
             <Route path='/' exact component={() => <Home products={products} uniqueProducers={uniqueProducers} paginationButtons={paginationButtons} />} />
-            <Route path='/cart' component={() => <Cart  uniqueProductsInBasket={uniqueProductsInBasket} quantity={quantity}/>} />
+            <Route path='/cart' component={() => <Cart  uniqueProductsInBasket={uniqueProductsInBasket} quantity={quantity} />} />
           </Switch>
         </BrowserRouter>
       </div>

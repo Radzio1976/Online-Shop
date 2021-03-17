@@ -2,23 +2,22 @@ import React from 'react';
 import {AuthContext} from '../../App';
 import CartNavSection from './CartNavSection/CartNavSection';
 import CartTableSection from './CartTableSection/CartTableSection';
+import CartTotalSection from './CartTotalSection/CartTotalSection';
 
 class Cart extends React.Component {
     render() {       
         return(
             <AuthContext.Consumer>
                 {
-                    ({appState, removeProduct, badgesBackground}) => {
+                    ({appState}) => {
                         return(
                             <div className="Cart">   
                             {appState.total === 0 ?
                                 <h1 style={{textAlign: "center"}}>Twój koszyk jest pusty</h1> : 
                             <>
                                 <CartNavSection />
-                                <CartTableSection />
-                                <div className="cart-total">
-                                    <p>Total <span>{(appState.total).toFixed(2)} PLN</span></p>
-                                </div>
+                                <CartTableSection uniqueProductsInBasket={this.props.uniqueProductsInBasket} quantity={this.props.quantity} />
+                                <CartTotalSection />
                                 </>
                             }                            
                                 
@@ -27,10 +26,6 @@ class Cart extends React.Component {
                     }
                 }
             </AuthContext.Consumer>
-
-                            
-
-
         )
     }
 }
