@@ -55,20 +55,28 @@ class App extends react.Component {
       [key]: value
     }, () => {
       console.log(value)
+      this.setState({
+        paginationCounter: 1,
+        firstProduct: 0,
+        lastProduct: 15
+      })
       if (value === "16") {
           this.setState({
+              paginationCounter: 1,
               firstProduct: 0,
               lastProduct: 15
           })
       }
       if (value === "32") {
           this.setState({
+              paginationCounter: 1,
               firstProduct: 0,
               lastProduct: 31
           })
       }
       if (value === "64") {
           this.setState({
+              paginationCounter: 1,
               firstProduct: 0,
               lastProduct: 63
           })
@@ -191,21 +199,25 @@ class App extends react.Component {
 
   handlePage = (paginationIndex) => {
     console.log(paginationIndex)
-    const {limit} = this.state;
+    let {limit} = this.state;
+    limit = Number(limit)
+    console.log(limit)
     this.setState({
         paginationCounter: paginationIndex,
-        firstProduct: (paginationIndex * Number(limit)) - Number(limit),
-        lastProduct: (paginationIndex * Number(limit)) - 1
+        firstProduct: (paginationIndex * limit) - limit,
+        lastProduct: (paginationIndex * limit) - 1
     })
   }
 
 handlePrevious = () => {
-    const {paginationCounter, limit} = this.state;
+    const {paginationCounter} = this.state;
+    let {limit} = this.state;
+    limit = Number(limit)
     if (paginationCounter > 1) {
         this.setState({
             paginationCounter: paginationCounter  - 1,
-            firstProduct: ((paginationCounter * Number(limit)) - Number(limit)) - Number(limit),
-            lastProduct: ((paginationCounter * Number(limit)) - 1) - Number(limit)
+            firstProduct: ((paginationCounter * limit) - limit) - limit,
+            lastProduct: ((paginationCounter * limit) - 1) - limit
         })
     } else {
         return
@@ -213,12 +225,14 @@ handlePrevious = () => {
 }
 
 handleNext = (paginationButtons) => {
-    const {paginationCounter, limit} = this.state;
+    const {paginationCounter} = this.state;
+    let {limit} = this.state;
+    limit = Number(limit)
     if (paginationCounter < paginationButtons.length) {
         this.setState({
             paginationCounter: paginationCounter  + 1,
-            firstProduct: ((paginationCounter * Number(limit)) - Number(limit)) + Number(limit),
-            lastProduct: ((paginationCounter * Number(limit)) - 1) + Number(limit)
+            firstProduct: ((paginationCounter * limit) - limit) + limit,
+            lastProduct: ((paginationCounter * limit) - 1) + limit
         })
     } else {
         return
@@ -259,10 +273,6 @@ handleAddToBasket = (product) => {
   console.log(this.state.total)
 }
 
-removeProducts = () => {
-  localStorage.removeItem("addedProducts")
-}
-
 removeProduct = (productId, productPrice) => {
   let basket = this.state.basket
   let {total} = this.state;
@@ -287,7 +297,7 @@ removeProduct = (productId, productPrice) => {
 }
 
   render() { 
-    console.log(this.state.products)
+    console.log(this.state.limit)
 
         // Tworzenie tablicy z unikalnymi nazwami producentów
         const {mainBaseOfProducts, orderBy, productName, producer, priceFrom, priceTo, limit} = this.state;

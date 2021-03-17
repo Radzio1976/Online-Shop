@@ -11,7 +11,7 @@ class HomeProductSection extends React.Component{
         return(
             <AuthContext.Consumer>
                 {
-                    ({appState, lastProduct, productStyle}) => {
+                    ({appState, productStyle}) => {
 
                         return(
                             <>

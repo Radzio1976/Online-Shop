@@ -11,7 +11,6 @@ class HomeProductBuyButtonSection extends React.Component{
                         return(
                             <div className="buy-button-container">
                                  <button onClick={() => handleAddToBasket(product)}>Buy</button>
-                                 <button onClick={() => removeProducts()}>Remove</button>
                             </div>
                         )
                     }
