@@ -4,6 +4,7 @@ import axios from 'axios';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Cart from './components/Cart';
+import Registration from './components/Registration';
 
 const AuthContext = createContext();
 
@@ -375,6 +376,7 @@ class App extends react.Component {
               <Switch>
                 <Route path='/' exact component={() => <Home products={products} uniqueProducers={uniqueProducers} paginationButtons={paginationButtons} />} />
                 <Route path='/cart' component={() => <Cart  uniqueProductsInBasket={uniqueProductsInBasket} inBasketProductsQty={inBasketProductsQty} />} />
+                <Route path='/registration' component={Registration} />
               </Switch>
           </BrowserRouter>
         </div>
