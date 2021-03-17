@@ -16,11 +16,10 @@ class Cart extends React.Component {
                                 <h1 style={{textAlign: "center"}}>Twój koszyk jest pusty</h1> : 
                             <>
                                 <CartNavSection />
-                                <CartTableSection uniqueProductsInBasket={this.props.uniqueProductsInBasket} quantity={this.props.quantity} />
+                                <CartTableSection uniqueProductsInBasket={this.props.uniqueProductsInBasket} inBasketProductsQty={this.props.inBasketProductsQty} />
                                 <CartTotalSection />
-                                </>
-                            }                            
-                                
+                            </>
+                            }                                                           
                             </div>
                         )
                     }

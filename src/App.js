@@ -362,7 +362,7 @@ removeProduct = (productId, productPrice) => {
         //console.log(uniqueProductsInBasket)
 
 
-        const quantity = (productId) => {
+        const inBasketProductsQty = (productId) => {
           const basket = this.state.basket;
           console.log(basket)
             let qty = 0;
@@ -382,7 +382,7 @@ removeProduct = (productId, productPrice) => {
         <Nav />
           <Switch>
             <Route path='/' exact component={() => <Home products={products} uniqueProducers={uniqueProducers} paginationButtons={paginationButtons} />} />
-            <Route path='/cart' component={() => <Cart  uniqueProductsInBasket={uniqueProductsInBasket} quantity={quantity} />} />
+            <Route path='/cart' component={() => <Cart  uniqueProductsInBasket={uniqueProductsInBasket} inBasketProductsQty={inBasketProductsQty} />} />
           </Switch>
         </BrowserRouter>
       </div>
