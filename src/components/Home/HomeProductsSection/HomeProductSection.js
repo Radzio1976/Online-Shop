@@ -12,23 +12,22 @@ class HomeProductSection extends React.Component{
             <AuthContext.Consumer>
                 {
                     ({appState, productStyle}) => {
-
                         return(
                             <>
-                            {
-                                this.props.products.map((product, index) => {
-                                                return(
-                                                    index >= appState.firstProduct && index <= appState.lastProduct ? 
-                                <div key={product.id} className="product-container" style={productStyle(index)}>
-                                    <HomeProductImageSection product={product} />
-                                    <HomeProductBadgesSection product={product} />
-                                    <HomeProductNameSection product={product} /> 
-                                    <HomeProductFeaturesSection product={product} />
-                                    <HomeProductBuyButtonAndPriceSection product={product} />
-                                </div> : ""
-                                    )
-                                })
-                            }
+                                {
+                                    this.props.products.map((product, index) => {
+                                                    return(
+                                                        index >= appState.firstProduct && index <= appState.lastProduct ? 
+                                    <div key={product.id} className="product-container" style={productStyle(index)}>
+                                        <HomeProductImageSection product={product} />
+                                        <HomeProductBadgesSection product={product} />
+                                        <HomeProductNameSection product={product} /> 
+                                        <HomeProductFeaturesSection product={product} />
+                                        <HomeProductBuyButtonAndPriceSection product={product} />
+                                    </div> : ""
+                                        )
+                                    })
+                                }
                             </>
                         )
                     }

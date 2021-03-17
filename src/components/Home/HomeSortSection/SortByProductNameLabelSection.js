@@ -4,7 +4,6 @@ import {AuthContext} from '../../../App';
 
 class SortByProductNameLabelSection extends React.Component{
     render() {
-        //console.log(this.props)
         return(
             <AuthContext.Consumer>
                 {

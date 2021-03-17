@@ -7,7 +7,7 @@ class HomeProductBuyButtonSection extends React.Component{
         return(
             <AuthContext.Consumer>
                 {
-                    ({handleAddToBasket, removeProducts}) => {
+                    ({handleAddToBasket}) => {
                         return(
                             <div className="buy-button-container">
                                  <button onClick={() => handleAddToBasket(product)}>Buy</button>
