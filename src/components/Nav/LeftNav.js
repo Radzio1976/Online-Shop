@@ -7,13 +7,13 @@ render() {
     return(
         <AuthContext.Consumer>
             {
-                ({resetAllSorts, handleSaleProducts, getOnSaleQty, getProductsByProducer, getProductsByProducerQty}) => {
+                ({resetAllSorts, getOnSaleProducts, getOnSaleQty, getProductsByProducer, getProductsByProducerQty}) => {
                     return(
                 <nav className="left-nav">
                     <ul>
                     <li onClick={() => {resetAllSorts()
                                         this.props.history.push('/')}}>Homepage</li>
-                    <li onClick={() => {handleSaleProducts("Sale")
+                    <li onClick={() => {getOnSaleProducts("Sale")
                                         this.props.history.push('/')}}>On Sale <span>{getOnSaleQty("Sale")}</span></li>
                     <li onClick={() => {getProductsByProducer("Samsung")
                                         this.props.history.push('/')}}>Samsung<span>{getProductsByProducerQty("Samsung")}</span></li>

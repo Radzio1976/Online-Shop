@@ -122,7 +122,7 @@ class App extends react.Component {
     return sum;
   }
 
-  handleSaleProducts = (value) => {
+  getOnSaleProducts = (value) => {
     this.resetSorts()
     let mainBaseOfProducts = this.state.mainBaseOfProducts;
     
@@ -362,7 +362,7 @@ class App extends react.Component {
 
     return(
       <AuthContext.Provider value={{appState: this.state, handleChange: this.handleChange, resetAllSorts: this.resetAllSorts, 
-      getOnSaleQty: this.getOnSaleQty, handleSaleProducts: this.handleSaleProducts, getProductsByProducer: this.getProductsByProducer, 
+      getOnSaleQty: this.getOnSaleQty, getOnSaleProducts: this.getOnSaleProducts, getProductsByProducer: this.getProductsByProducer, 
       getProductsByProducerQty: this.getProductsByProducerQty, lastProduct: this.lastProduct, productStyle: this.productStyle, 
       badgesBackground: this.badgesBackground, handlePage: this.handlePage, handlePrevious: this.handlePrevious, handleNext: this.handleNext, 
       handleAddToBasket: this.handleAddToBasket, removeProduct: this.removeProduct}}>
