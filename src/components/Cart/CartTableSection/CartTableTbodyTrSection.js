@@ -1,33 +1,22 @@
 import React from 'react';
-import {AuthContext} from '../../../App';
-import CartTableTbodyTrSecondColumnnSection from './CartTableTbodyTrSecondColumnnSection';
-import CartTableTbodyTrThirdColumnnSection from './CartTableTbodyTrThirdColumnnSection';
+import CartTableTbodyTdFirstColumnSection from './CartTableTbodyTdFirstColumnSection';
+import CartTableTbodyTdSecondColumnSection from './CartTableTbodyTdSecondColumnSection';
+import CartTableTbodyTdThirdColumnSection from './CartTableTbodyTdThirdColumnSection';
+import CartTableTbodyTdFourthColumnSection from './CartTableTbodyTdFourthColumnSection';
+import CartTableTbodyTdFifthColumnSection from './CartTableTbodyTdFifthColumnSection';
+import CartTableTbodyTdSixthColumnSection from './CartTableTbodyTdSixthColumnSection';
 
 class CartTableTbodyTrSection extends React.Component {
-    render() {   
-        const product = this.props.product;
-        const index = this.props.index;    
+    render() {     
         return(
-            <AuthContext.Consumer>
-                {
-                    ({removeProduct}) => {
-                        return(
-                            <>
-                                <td className="table-first-column">{index + 1}.</td>
-                                <td className="table-second-column">
-                                    <CartTableTbodyTrSecondColumnnSection product={product} index={index} />
-                                </td>                                                      
-                                <td className="table-third-column">
-                                    <CartTableTbodyTrThirdColumnnSection product={product} />
-                                    </td>
-                                <td className="table-fourth-column">x {this.props.inBasketProductsQty(product.id)}</td>
-                                <td className="table-fifth-column">{(this.props.inBasketProductsQty(product.id) * product.price).toFixed(2)} PLN</td>
-                                <td className="table-sixth-column"><button onClick={() => removeProduct(product.id, product.price)}>Remove</button></td>
-                            </>
-                        )
-                    }
-                }
-            </AuthContext.Consumer>
+            <>
+                <CartTableTbodyTdFirstColumnSection index={this.props.index} />
+                <CartTableTbodyTdSecondColumnSection product={this.props.product} index={this.props.index} />                                                     
+                <CartTableTbodyTdThirdColumnSection product={this.props.product} />
+                <CartTableTbodyTdFourthColumnSection product={this.props.product} inBasketProductsQty={this.props.inBasketProductsQty} />
+                <CartTableTbodyTdFifthColumnSection product={this.props.product} inBasketProductsQty={this.props.inBasketProductsQty} />
+                <CartTableTbodyTdSixthColumnSection product={this.props.product} />
+            </>
         )
     }
 }

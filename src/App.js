@@ -109,7 +109,7 @@ class App extends react.Component {
   getOnSaleQty = (value) => {
     const mainBaseOfProducts = this.state.mainBaseOfProducts;   
     let sum = 0;
-
+    
     for (let i=0; i<mainBaseOfProducts.length; i++) {
         if (mainBaseOfProducts[i].marks !== null) {
             for (let k=0; k<mainBaseOfProducts[i].marks.length; k++) {
@@ -126,7 +126,6 @@ class App extends react.Component {
     this.resetSorts()
     let mainBaseOfProducts = this.state.mainBaseOfProducts;
     
-    console.log(mainBaseOfProducts)
     let onSale = [];
     for (let i=0; i<mainBaseOfProducts.length; i++) {
       if (mainBaseOfProducts[i].marks !== null) {
@@ -195,7 +194,6 @@ class App extends react.Component {
   }
 
   handlePage = (paginationIndex) => {
-    console.log(paginationIndex)
     let {limit} = this.state;
     limit = Number(limit)
 
@@ -333,7 +331,7 @@ class App extends react.Component {
 
     uniqueProducers.sort();
 
-    // Tworzenie tablicy z przyciskami paginacji
+
     let paginationButtons = [];
 
     if (products.length > limit) {
@@ -348,12 +346,10 @@ class App extends react.Component {
     .map(id => {
       return basket.find(product => product.id === id)
     })
-    //console.log(uniqueProductsInBasket)
 
 
     const inBasketProductsQty = (productId) => {
       const basket = this.state.basket;
-      console.log(basket)
         let qty = 0;
         for (let i=0; i<basket.length; i++) {
             if (basket[i].id === productId) {
