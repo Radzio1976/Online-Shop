@@ -53,11 +53,13 @@ class App extends react.Component {
     this.setState({
       [key]: value
     }, () => {
-      this.setState({
-        paginationCounter: 1,
-        firstProduct: 0,
-        lastProduct: 15
-      })
+      if (value === "16") {
+          this.setState({
+              paginationCounter: 1,
+              firstProduct: 0,
+              lastProduct: 15
+          })
+      }
       if (value === "32") {
           this.setState({
               paginationCounter: 1,
