@@ -9,7 +9,7 @@ class SortByPriceFromSection extends React.Component{
                     ({appState, handleChange}) => {
                         return(
                             <label>Price From
-                                <input type="text" name="priceFrom" value={appState.priceFrom} onChange={e => handleChange(e.target.name, e.target.value)}></input>
+                                <input type="text" name="priceFrom" value={appState.priceFrom} onChange={e => handleChange(e.target.name, e.target.value)} autoFocus={appState.key === "priceFrom"}></input>
                             </label>
                         )
                     }

@@ -10,7 +10,7 @@ class SortByProductNameLabelSection extends React.Component{
                     ({appState, handleChange}) => {
                         return(
                             <label>Product Name
-                                <input type="text" name="productName" value={appState.productName} onChange={e => handleChange(e.target.name, e.target.value)}></input>
+                                <input type="text" name="productName" value={appState.productName} onChange={e => handleChange(e.target.name, e.target.value)} autoFocus={appState.key === "productName"}></input>
                             </label>
                         )
                     }

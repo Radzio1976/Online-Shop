@@ -23,7 +23,8 @@ class App extends react.Component {
     firstProduct: 0,
     lastProduct: 15,
     basket: [],
-    total: 0
+    total: 0,
+    key: ""
   }
 
   componentDidMount() {
@@ -53,6 +54,9 @@ class App extends react.Component {
     this.setState({
       [key]: value
     }, () => {
+      this.setState({
+        key: key
+      })
       if (value === "16") {
           this.setState({
               paginationCounter: 1,
