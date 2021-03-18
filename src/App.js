@@ -87,7 +87,9 @@ class App extends react.Component {
       priceTo: "",
       orderBy: "",
       limit: "16",
-      paginationCounter: 1
+      paginationCounter: 1,
+      firstProduct: 0,
+      lastProduct: 15
     })
   }
 
