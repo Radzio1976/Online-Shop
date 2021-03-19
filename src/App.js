@@ -64,12 +64,41 @@ class App extends react.Component {
     })
   }
 
+  changeOrderBy = (value) => {
+    let products = this.state.products;
+
+    if (value === "Price 0-9") {
+      products.sort((a, b) => {
+          return parseFloat(Number(a.price)) - parseFloat(Number(b.price))
+      })
+    }
+
+    if (value === "Price 9-0") {
+      products.sort((a, b) => {
+          return parseFloat(Number(b.price)) - parseFloat(Number(a.price))
+      })
+    }
+
+    if (value === "Name A-Z") {
+      products.sort((a, b) => {
+          return a.producer > b.producer ? 1 : -1
+      })
+    }
+
+    if (value === "Name Z-A") {
+      products.sort((a, b) => {
+          return b.producer > a.producer ? 1 : -1
+      })
+    } 
+  }
+
   handleChange = (key, value) => {
     this.setState({
       [key]: value
     }, () => {
       this.getCurrentKey(key)
       this.changeLimit(value)
+      this.changeOrderBy(value)
   }) 
   }
 
@@ -82,16 +111,6 @@ class App extends react.Component {
       priceFrom: "",
       priceTo: "",
       orderBy: "",
-      limit: "16",
-      paginationCounter: 1,
-      firstProduct: 0,
-      lastProduct: 15
-    })
-  }
-
-  resetSorts = () => {
-    this.setState({
-      producer: "",
       limit: "16",
       paginationCounter: 1,
       firstProduct: 0,
@@ -116,7 +135,7 @@ class App extends react.Component {
   }
 
   getOnSaleProducts = (value) => {
-    this.resetSorts()
+    this.resetAllSorts()
     let mainBaseOfProducts = this.state.mainBaseOfProducts;
     
     let onSale = [];
@@ -136,7 +155,7 @@ class App extends react.Component {
   }
 
   getProductsByProducer = (value) => {
-    this.resetSorts()
+    this.resetAllSorts()
     const mainBaseOfProducts = this.state.mainBaseOfProducts;
 
     let productsByProducer = mainBaseOfProducts.filter(product => {
@@ -280,34 +299,9 @@ class App extends react.Component {
   }
 
   render() { 
-    const {mainBaseOfProducts, orderBy, productName, producer, priceFrom, priceTo, limit} = this.state;
+    const {mainBaseOfProducts, productName, producer, priceFrom, priceTo, limit} = this.state;
     let products = this.state.products;
     let basket = this.state.basket;
-
-    if (orderBy === "Price 0-9") {
-      products.sort((a, b) => {
-          return parseFloat(Number(a.price)) - parseFloat(Number(b.price))
-      })
-    }
-
-    if (orderBy === "Price 9-0") {
-      products.sort((a, b) => {
-          return parseFloat(Number(b.price)) - parseFloat(Number(a.price))
-      })
-    }
-
-    if (orderBy === "Name A-Z") {
-      products.sort((a, b) => {
-          return a.producer > b.producer ? 1 : -1
-      })
-    }
-
-    if (orderBy === "Name Z-A") {
-      products.sort((a, b) => {
-          return b.producer > a.producer ? 1 : -1
-      })
-    } 
-
 
     let sortedProducts = products.filter(product => {
       return product.name.toLowerCase().includes(productName.toLowerCase()) && product.producer.includes(producer) && product.price >= Number(priceFrom) && (product.price <= Number(priceTo) || priceTo === "")
