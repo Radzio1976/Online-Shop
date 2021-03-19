@@ -50,34 +50,26 @@ class App extends react.Component {
     })
   }
 
+  getCurrentKey = (key) => {
+    this.setState({
+      key: key
+    })
+  }
+
+  changeLimit = (value) => {
+      this.setState({
+          paginationCounter: 1,
+          firstProduct: 0,
+          lastProduct: value === "16" ? 15 : "" || value === "32" ? 31 : "" || value === "64" ? 63 : ""
+      })
+  }
+
   handleChange = (key, value) => {
     this.setState({
       [key]: value
     }, () => {
-      this.setState({
-        key: key
-      })
-      if (value === "16") {
-          this.setState({
-              paginationCounter: 1,
-              firstProduct: 0,
-              lastProduct: 15
-          })
-      }
-      if (value === "32") {
-          this.setState({
-              paginationCounter: 1,
-              firstProduct: 0,
-              lastProduct: 31
-          })
-      }
-      if (value === "64") {
-          this.setState({
-              paginationCounter: 1,
-              firstProduct: 0,
-              lastProduct: 63
-          })
-      }
+      this.getCurrentKey(key)
+      this.changeLimit(value)
   }) 
   }
 
