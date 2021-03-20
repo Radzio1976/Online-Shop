@@ -303,10 +303,12 @@ class App extends react.Component {
     let products = this.state.products;
     let basket = this.state.basket;
 
+    
     let sortedProducts = products.filter(product => {
       return product.name.toLowerCase().includes(productName.toLowerCase()) && product.producer.includes(producer) && product.price >= Number(priceFrom) && (product.price <= Number(priceTo) || priceTo === "")
     })
     products = sortedProducts
+    
 
     let producersNames = [];
 
@@ -350,7 +352,7 @@ class App extends react.Component {
     return(
       <AuthContext.Provider value={{appState: this.state, handleChange: this.handleChange, resetAllSorts: this.resetAllSorts, 
       getOnSaleQty: this.getOnSaleQty, getOnSaleProducts: this.getOnSaleProducts, getProductsByProducer: this.getProductsByProducer, 
-      getProductsByProducerQty: this.getProductsByProducerQty, lastProduct: this.lastProduct, productStyle: this.productStyle, 
+      getProductsByProducerQty: this.getProductsByProducerQty, productStyle: this.productStyle, 
       badgesBackground: this.badgesBackground, handlePage: this.handlePage, handlePrevious: this.handlePrevious, handleNext: this.handleNext, 
       handleAddToBasket: this.handleAddToBasket, removeProduct: this.removeProduct}}>
         <div id="App">
