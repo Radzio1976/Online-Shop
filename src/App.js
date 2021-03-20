@@ -18,7 +18,6 @@ class App extends react.Component {
     priceTo: "",
     orderBy: "",
     limit: "16",
-    producerSelected: false,
     paginationCounter: 1,
     firstProduct: 0,
     lastProduct: 15,
@@ -163,7 +162,6 @@ class App extends react.Component {
     })
 
     this.setState({
-      producerSelected: true,
       producer: value,
       products: productsByProducer
     })
