@@ -121,31 +121,24 @@ class App extends react.Component {
     const mainBaseOfProducts = this.state.mainBaseOfProducts;   
     let sum = 0;
 
-    let productsWithMarks = mainBaseOfProducts.filter(product => {
+    let onSaleProducts = mainBaseOfProducts.filter(product => {
       return product.marks !== null && product.marks.includes("Sale")
     })
-    sum = productsWithMarks.length
+    sum = onSaleProducts.length
     return sum
   }
 
-  getOnSaleProducts = (value) => {
+  getOnSaleProducts = () => {
     this.resetAllSorts()
     let mainBaseOfProducts = this.state.mainBaseOfProducts;
-    
-    let onSale = [];
-    for (let i=0; i<mainBaseOfProducts.length; i++) {
-      if (mainBaseOfProducts[i].marks !== null) {
-        for (let k=0; k<mainBaseOfProducts[i].marks.length; k++) {
-          if (mainBaseOfProducts[i].marks[k] === value) {            
-            onSale.push(mainBaseOfProducts[i])
-            }
-          }         
-        } 
-    }
-       
-    this.setState({
-      products: onSale
+
+    let onSaleProducts = mainBaseOfProducts.filter(product => {
+      return product.marks !== null && product.marks.includes("Sale")
     })
+ 
+    this.setState({
+      products: onSaleProducts
+    })    
   }
 
   getProductsByProducer = (value) => {

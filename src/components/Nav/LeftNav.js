@@ -13,7 +13,7 @@ render() {
                     <ul>
                     <li onClick={() => {resetAllSorts()
                                         this.props.history.push('/')}}>Homepage</li>
-                    <li onClick={() => {getOnSaleProducts("Sale")
+                    <li onClick={() => {getOnSaleProducts()
                                         this.props.history.push('/')}}>On Sale <span>{getOnSaleQty()}</span></li>
                     <li onClick={() => {getProductsByProducer("Samsung")
                                         this.props.history.push('/')}}>Samsung<span>{getProductsByProducerQty("Samsung")}</span></li>
