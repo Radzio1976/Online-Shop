@@ -128,10 +128,7 @@ class App extends react.Component {
   }
 
   getOnSaleQty = () => {
-   let sum = 0;
-
-    sum = this.getOnSaleProductsArray().length
-    return sum
+    return this.getOnSaleProductsArray().length
   }
 
   getOnSaleProducts = () => {
