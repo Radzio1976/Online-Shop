@@ -64,7 +64,7 @@ class App extends react.Component {
   }
 
   changeOrderBy = (value) => {
-    let products = this.state.products;
+    let products = this.state.mainBaseOfProducts;
 
     if (value === "Price 0-9") {
       products.sort((a, b) => {
@@ -97,7 +97,8 @@ class App extends react.Component {
     const {productName, producer, priceFrom, priceTo} = this.state;
 
     let sortedProducts = products.filter(product => {
-      return product.name.toLowerCase().includes(productName.toLowerCase()) && product.producer.includes(producer) && product.price >= Number(priceFrom) && (product.price <= Number(priceTo) || priceTo === "")
+      return product.name.toLowerCase().includes(productName.toLowerCase()) && product.producer.includes(producer) && product.price >= Number(priceFrom) && 
+      (product.price <= Number(priceTo) || priceTo === "")
     })
 
     this.setState({
