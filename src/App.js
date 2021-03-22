@@ -89,6 +89,20 @@ class App extends react.Component {
           return b.producer > a.producer ? 1 : -1
       })
     } 
+    return products
+  }
+
+  changeRestOfSorts = () => {
+    let products = this.state.mainBaseOfProducts;
+    const {productName, producer, priceFrom, priceTo} = this.state;
+
+    let sortedProducts = products.filter(product => {
+      return product.name.toLowerCase().includes(productName.toLowerCase()) && product.producer.includes(producer) && product.price >= Number(priceFrom) && (product.price <= Number(priceTo) || priceTo === "")
+    })
+
+    this.setState({
+      products: sortedProducts
+    })
   }
 
   handleChange = (key, value) => {
@@ -98,6 +112,7 @@ class App extends react.Component {
       this.getCurrentKey(key)
       this.changeLimit(value)
       this.changeOrderBy(value)
+      this.changeRestOfSorts()
   }) 
   }
 
@@ -283,16 +298,9 @@ class App extends react.Component {
   }
 
   render() { 
-    const {mainBaseOfProducts, productName, producer, priceFrom, priceTo, limit} = this.state;
+    const {mainBaseOfProducts, limit} = this.state;
     let products = this.state.products;
     let basket = this.state.basket;
-
-    
-    let sortedProducts = products.filter(product => {
-      return product.name.toLowerCase().includes(productName.toLowerCase()) && product.producer.includes(producer) && product.price >= Number(priceFrom) && (product.price <= Number(priceTo) || priceTo === "")
-    })
-    products = sortedProducts
-    
 
     let producersNames = [];
 
