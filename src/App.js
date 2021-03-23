@@ -298,11 +298,8 @@ class App extends react.Component {
     }
   }
 
-  render() { 
-    const {mainBaseOfProducts, limit} = this.state;
-    let products = this.state.products;
-    let basket = this.state.basket;
-
+  uniqueProducers = () => {
+    const mainBaseOfProducts = this.state.mainBaseOfProducts;
     let producersNames = [];
 
     mainBaseOfProducts.forEach((product, index) => {
@@ -310,8 +307,14 @@ class App extends react.Component {
     })
 
     const uniqueProducers = [...new Set(producersNames)]
+    console.log(uniqueProducers)
+    return uniqueProducers.sort();
+  }
 
-    uniqueProducers.sort();
+  render() { 
+    const {limit} = this.state;
+    let products = this.state.products;
+    let basket = this.state.basket;
 
 
     let paginationButtons = [];
@@ -352,7 +355,7 @@ class App extends react.Component {
           <BrowserRouter>
             <Nav />
               <Switch>
-                <Route path='/' exact component={() => <Home products={products} uniqueProducers={uniqueProducers} paginationButtons={paginationButtons} />} />
+                <Route path='/' exact component={() => <Home products={products} uniqueProducers={this.uniqueProducers} paginationButtons={paginationButtons} />} />
                 <Route path='/cart' component={() => <Cart  uniqueProductsInBasket={uniqueProductsInBasket} inBasketProductsQty={inBasketProductsQty} />} />
                 <Route path='/registration' component={Registration} />
               </Switch>
