@@ -178,31 +178,52 @@ class App extends react.Component {
     return productsByProducerQty.length
   }
 
-  productStyle = (index) => {
-      if (index % 4 === 0) {
-        return {marginRight: "3.33%"}
-    }
-    
-    if (index % 4 === 1) {
-        return {marginLeft: "3.33%", marginRight: "3.33%"}
-    }
-    
-    if (index % 4 === 2) {
-        return {marginLeft: "3.33%", marginRight: "3.33%"}
-    }
-    
-    if (index % 4 === 3) {
-        return {marginLeft: "3.33%"}
+  uniqueProducers = () => {
+    const mainBaseOfProducts = this.state.mainBaseOfProducts;
+    let producersNames = [];
+
+    mainBaseOfProducts.forEach((product, index) => {
+      producersNames.push(product.producer)
+    })
+
+    const uniqueProducers = [...new Set(producersNames)]
+    console.log(uniqueProducers)
+    return uniqueProducers.sort();
+  }
+
+  paginationButtons = () => {
+    const products = this.state.products;
+    const {limit} = this.state;
+    let paginationButtons = [];
+
+    if (products.length > limit) {
+        for (let i=0; i<Math.ceil(products.length / limit); i++) {
+            paginationButtons.push(i + 1)
+        }
+        return paginationButtons
+    } else {
+        return paginationButtons = [];
     }
   }
 
-  badgesBackground = (mark) => {
-      if (mark === "LastItems") {
-        return {background: "#ffc539"}
+  uniqueProductsInBasket = () => {
+    let basket = this.state.basket;
+    const uniqueProductsInBasket = Array.from(new Set(basket.map(product => product.id)))
+    .map(id => {
+      return basket.find(product => product.id === id)
+    })
+    return uniqueProductsInBasket
+  }
+
+  inBasketProductsQty = (productId) => {
+    const basket = this.state.basket;
+    let qty = 0;
+    for (let i=0; i<basket.length; i++) {
+        if (basket[i].id === productId) {
+          qty += 1
+        }
     }
-    if (mark === "Sale" || mark === "Promotion" || mark === "Bestseller") {
-        return {background: "red", color: "white"}
-    }
+    return qty
   }
 
   handlePage = (paginationIndex) => {
@@ -298,58 +319,34 @@ class App extends react.Component {
     }
   }
 
-  uniqueProducers = () => {
-    const mainBaseOfProducts = this.state.mainBaseOfProducts;
-    let producersNames = [];
-
-    mainBaseOfProducts.forEach((product, index) => {
-      producersNames.push(product.producer)
-    })
-
-    const uniqueProducers = [...new Set(producersNames)]
-    console.log(uniqueProducers)
-    return uniqueProducers.sort();
+  productStyle = (index) => {
+    if (index % 4 === 0) {
+      return {marginRight: "3.33%"}
   }
-
-  paginationButtons = () => {
-    const products = this.state.products;
-    const {limit} = this.state;
-    let paginationButtons = [];
-
-    if (products.length > limit) {
-        for (let i=0; i<Math.ceil(products.length / limit); i++) {
-            paginationButtons.push(i + 1)
-        }
-        return paginationButtons
-    } else {
-        return paginationButtons = [];
-    }
+  
+  if (index % 4 === 1) {
+      return {marginLeft: "3.33%", marginRight: "3.33%"}
   }
-
-  uniqueProductsInBasket = () => {
-    let basket = this.state.basket;
-    const uniqueProductsInBasket = Array.from(new Set(basket.map(product => product.id)))
-    .map(id => {
-      return basket.find(product => product.id === id)
-    })
-    return uniqueProductsInBasket
+  
+  if (index % 4 === 2) {
+      return {marginLeft: "3.33%", marginRight: "3.33%"}
   }
+  
+  if (index % 4 === 3) {
+      return {marginLeft: "3.33%"}
+  }
+}
+
+badgesBackground = (mark) => {
+    if (mark === "LastItems") {
+      return {background: "#ffc539"}
+  }
+  if (mark === "Sale" || mark === "Promotion" || mark === "Bestseller") {
+      return {background: "red", color: "white"}
+  }
+}
 
   render() { 
-    let products = this.state.products;
-
-    const inBasketProductsQty = (productId) => {
-      const basket = this.state.basket;
-        let qty = 0;
-        for (let i=0; i<basket.length; i++) {
-            if (basket[i].id === productId) {
-              qty += 1
-            }
-        }
-        return qty
-      }
-
-
     return(
       <AuthContext.Provider value={{appState: this.state, handleChange: this.handleChange, resetAllSorts: this.resetAllSorts, 
       getOnSaleQty: this.getOnSaleQty, getOnSaleProducts: this.getOnSaleProducts, getProductsByProducer: this.getProductsByProducer, 
@@ -360,8 +357,8 @@ class App extends react.Component {
           <BrowserRouter>
             <Nav />
               <Switch>
-                <Route path='/' exact component={() => <Home products={products} uniqueProducers={this.uniqueProducers} paginationButtons={this.paginationButtons} />} />
-                <Route path='/cart' component={() => <Cart  uniqueProductsInBasket={this.uniqueProductsInBasket} inBasketProductsQty={inBasketProductsQty} />} />
+                <Route path='/' exact component={() => <Home products={this.state.products} uniqueProducers={this.uniqueProducers} paginationButtons={this.paginationButtons} />} />
+                <Route path='/cart' component={() => <Cart  uniqueProductsInBasket={this.uniqueProductsInBasket} inBasketProductsQty={this.inBasketProductsQty} />} />
                 <Route path='/registration' component={Registration} />
               </Switch>
           </BrowserRouter>
