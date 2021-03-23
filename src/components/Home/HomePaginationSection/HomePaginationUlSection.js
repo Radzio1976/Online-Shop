@@ -10,16 +10,16 @@ class HomePaginationUlSection extends React.Component{
                     ({appState, handlePage, handlePrevious, handleNext}) => {
                         return(
                             <>
-                                {paginationButtons.length > 1 ? <ul>
+                                {paginationButtons().length > 1 ? <ul>
                                     <li onClick={() => handlePrevious()}>Previous</li>
                                     {
-                                        paginationButtons.map((button, index) => {
+                                        paginationButtons().map((button, index) => {
                                             return(
                                     <li key={index} onClick={() => handlePage(index + 1)} style={{background: appState.paginationCounter === index + 1 ? "#0c5acf" : "white", color: appState.paginationCounter === index + 1 ? "white" : ""}}>{button}</li>
                                             )
                                         })
                                     }
-                                    <li onClick={() => handleNext(paginationButtons)}>Next</li>
+                                    <li onClick={() => handleNext(paginationButtons())}>Next</li>
                                 </ul> : ""}
                             </>
                         )

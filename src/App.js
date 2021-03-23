@@ -311,21 +311,24 @@ class App extends react.Component {
     return uniqueProducers.sort();
   }
 
-  render() { 
+  paginationButtons = () => {
+    const products = this.state.products;
     const {limit} = this.state;
-    let products = this.state.products;
-    let basket = this.state.basket;
-
-
     let paginationButtons = [];
 
     if (products.length > limit) {
         for (let i=0; i<Math.ceil(products.length / limit); i++) {
             paginationButtons.push(i + 1)
         }
+        return paginationButtons
     } else {
-        console.log(false)
+        return paginationButtons = [];
     }
+  }
+
+  render() { 
+    let products = this.state.products;
+    let basket = this.state.basket;
 
     const uniqueProductsInBasket = Array.from(new Set(basket.map(product => product.id)))
     .map(id => {
@@ -355,7 +358,7 @@ class App extends react.Component {
           <BrowserRouter>
             <Nav />
               <Switch>
-                <Route path='/' exact component={() => <Home products={products} uniqueProducers={this.uniqueProducers} paginationButtons={paginationButtons} />} />
+                <Route path='/' exact component={() => <Home products={products} uniqueProducers={this.uniqueProducers} paginationButtons={this.paginationButtons} />} />
                 <Route path='/cart' component={() => <Cart  uniqueProductsInBasket={uniqueProductsInBasket} inBasketProductsQty={inBasketProductsQty} />} />
                 <Route path='/registration' component={Registration} />
               </Switch>
