@@ -3,11 +3,10 @@ import {AuthContext} from '../../../App';
 
 class HomePaginationUlSection extends React.Component{
     render() {
-        const paginationButtons = this.props.paginationButtons;
         return(
             <AuthContext.Consumer>
                 {
-                    ({appState, handlePage, handlePrevious, handleNext}) => {
+                    ({appState, handlePage, handlePrevious, handleNext, paginationButtons}) => {
                         return(
                             <>
                                 {paginationButtons().length > 1 ? <ul>

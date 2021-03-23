@@ -13,8 +13,8 @@ class CartTableTbodyTrSection extends React.Component {
                 <CartTableTbodyTdFirstColumnSection index={this.props.index} />
                 <CartTableTbodyTdSecondColumnSection product={this.props.product} index={this.props.index} />                                                     
                 <CartTableTbodyTdThirdColumnSection product={this.props.product} />
-                <CartTableTbodyTdFourthColumnSection product={this.props.product} inBasketProductsQty={this.props.inBasketProductsQty} />
-                <CartTableTbodyTdFifthColumnSection product={this.props.product} inBasketProductsQty={this.props.inBasketProductsQty} />
+                <CartTableTbodyTdFourthColumnSection product={this.props.product} />
+                <CartTableTbodyTdFifthColumnSection product={this.props.product} />
                 <CartTableTbodyTdSixthColumnSection product={this.props.product} />
             </>
         )

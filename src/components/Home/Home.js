@@ -7,9 +7,9 @@ class Home extends React.Component {
     render() {
         return(
             <div id="Home">
-                <HomeSortSection uniqueProducers={this.props.uniqueProducers} />
+                <HomeSortSection />
                 <HomeProductsSection products={this.props.products} />
-                <HomePaginationSection paginationButtons={this.props.paginationButtons} />
+                <HomePaginationSection />
             </div>            
         )
     }

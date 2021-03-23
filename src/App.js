@@ -348,17 +348,32 @@ badgesBackground = (mark) => {
 
   render() { 
     return(
-      <AuthContext.Provider value={{appState: this.state, handleChange: this.handleChange, resetAllSorts: this.resetAllSorts, 
-      getOnSaleQty: this.getOnSaleQty, getOnSaleProducts: this.getOnSaleProducts, getProductsByProducer: this.getProductsByProducer, 
-      getProductsByProducerQty: this.getProductsByProducerQty, productStyle: this.productStyle, 
-      badgesBackground: this.badgesBackground, handlePage: this.handlePage, handlePrevious: this.handlePrevious, handleNext: this.handleNext, 
-      handleAddToBasket: this.handleAddToBasket, removeProduct: this.removeProduct}}>
+      <AuthContext.Provider value={{
+        appState: this.state, 
+        handleChange: this.handleChange, 
+        resetAllSorts: this.resetAllSorts, 
+        getOnSaleQty: this.getOnSaleQty, 
+        getOnSaleProducts: this.getOnSaleProducts, 
+        getProductsByProducer: this.getProductsByProducer, 
+        getProductsByProducerQty: this.getProductsByProducerQty,  
+        uniqueProducers: this.uniqueProducers,
+        paginationButtons: this.paginationButtons,
+        uniqueProductsInBasket: this.uniqueProductsInBasket,
+        inBasketProductsQty: this.inBasketProductsQty,
+        handlePage: this.handlePage, 
+        handlePrevious: this.handlePrevious, 
+        handleNext: this.handleNext, 
+        handleAddToBasket: this.handleAddToBasket, 
+        removeProduct: this.removeProduct,
+        productStyle: this.productStyle, 
+        badgesBackground: this.badgesBackground
+        }}>
         <div id="App">
           <BrowserRouter>
             <Nav />
               <Switch>
-                <Route path='/' exact component={() => <Home products={this.state.products} uniqueProducers={this.uniqueProducers} paginationButtons={this.paginationButtons} />} />
-                <Route path='/cart' component={() => <Cart  uniqueProductsInBasket={this.uniqueProductsInBasket} inBasketProductsQty={this.inBasketProductsQty} />} />
+                <Route path='/' exact component={() => <Home products={this.state.products} />} />
+                <Route path='/cart' component={() => <Cart />} />
                 <Route path='/registration' component={Registration} />
               </Switch>
           </BrowserRouter>

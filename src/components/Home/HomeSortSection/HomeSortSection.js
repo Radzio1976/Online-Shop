@@ -11,7 +11,7 @@ class HomeSortSection extends React.Component{
         return(
             <div className="HomeSortSection">
                 <SortByProductNameSection />
-                <SortByProducerSection uniqueProducers={this.props.uniqueProducers} />
+                <SortByProducerSection />
                 <SortByPriceFromSection />
                 <SortByPriceToSection />
                 <SortByOrderBySection />

@@ -7,7 +7,7 @@ class CartTableSection extends React.Component {
         return(
             <table className="cart-table">
                 <CartTableTheadSection />
-                <CartTableTbodySection uniqueProductsInBasket={this.props.uniqueProductsInBasket} inBasketProductsQty={this.props.inBasketProductsQty} />
+                <CartTableTbodySection />
             </table>
         )
     }

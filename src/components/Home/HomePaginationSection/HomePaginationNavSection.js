@@ -5,7 +5,7 @@ class HomePaginationNavSection extends React.Component{
     render() {
         return(
             <nav className="pagination-container">
-                <HomePaginationUlSection paginationButtons={this.props.paginationButtons} />
+                <HomePaginationUlSection />
             </nav>
         )
     }

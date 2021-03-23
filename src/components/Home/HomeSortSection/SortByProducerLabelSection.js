@@ -5,7 +5,7 @@ class SortByProducerLabelSection extends React.Component{
     render() {
         return(
             <label>Producer
-                <SortByProducerSelectSection uniqueProducers={this.props.uniqueProducers} />
+                <SortByProducerSelectSection />
             </label>
         )
     }
