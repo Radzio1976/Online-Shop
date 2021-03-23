@@ -15,7 +15,7 @@ class HomeProductSection extends React.Component{
                         return(
                             <>
                                 {
-                                    this.props.products.map((product, index) => {
+                                    appState.products.map((product, index) => {
                                                     return(
                                                         index >= appState.firstProduct && index <= appState.lastProduct ? 
                                     <div key={product.id} className="product-container" style={productStyle(index)}>

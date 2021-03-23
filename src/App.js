@@ -372,7 +372,7 @@ badgesBackground = (mark) => {
           <BrowserRouter>
             <Nav />
               <Switch>
-                <Route path='/' exact component={() => <Home products={this.state.products} />} />
+                <Route path='/' exact component={() => <Home />} />
                 <Route path='/cart' component={() => <Cart />} />
                 <Route path='/registration' component={Registration} />
               </Switch>
