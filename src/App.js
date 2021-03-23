@@ -326,15 +326,17 @@ class App extends react.Component {
     }
   }
 
-  render() { 
-    let products = this.state.products;
+  uniqueProductsInBasket = () => {
     let basket = this.state.basket;
-
     const uniqueProductsInBasket = Array.from(new Set(basket.map(product => product.id)))
     .map(id => {
       return basket.find(product => product.id === id)
     })
+    return uniqueProductsInBasket
+  }
 
+  render() { 
+    let products = this.state.products;
 
     const inBasketProductsQty = (productId) => {
       const basket = this.state.basket;
@@ -359,7 +361,7 @@ class App extends react.Component {
             <Nav />
               <Switch>
                 <Route path='/' exact component={() => <Home products={products} uniqueProducers={this.uniqueProducers} paginationButtons={this.paginationButtons} />} />
-                <Route path='/cart' component={() => <Cart  uniqueProductsInBasket={uniqueProductsInBasket} inBasketProductsQty={inBasketProductsQty} />} />
+                <Route path='/cart' component={() => <Cart  uniqueProductsInBasket={this.uniqueProductsInBasket} inBasketProductsQty={inBasketProductsQty} />} />
                 <Route path='/registration' component={Registration} />
               </Switch>
           </BrowserRouter>

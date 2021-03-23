@@ -6,7 +6,7 @@ class CartTableTbodySection extends React.Component {
         return(
             <tbody>
             {
-                    this.props.uniqueProductsInBasket.map((product, index) => {
+                    this.props.uniqueProductsInBasket().map((product, index) => {
                         return(
                             <tr key={index}>
                                 <CartTableTbodyTrSection product={product} index={index} uniqueProductsInBasket={this.props.uniqueProductsInBasket} inBasketProductsQty={this.props.inBasketProductsQty}/>
