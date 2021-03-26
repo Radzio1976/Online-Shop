@@ -27,7 +27,7 @@ class App extends react.Component {
   }
 
   componentDidMount() {
-    axios.get('https://simko.it/themes/simko-it/assets/products.json')
+    axios.get('http://localhost:3000/products')
     .then(res => {
       this.setState({
         mainBaseOfProducts: res.data,

@@ -1,0 +1,1990 @@
+{
+"products": [
+    {
+      "id": "514287",
+      "rating": 5.9,
+      "commentsCount": 21,
+      "ean": "PAG20018PL (XT2010-1)",
+      "name": "One Zoom 4/128GB Dual SIM Electric Gray + etui",
+      "producer": "Motorola",
+      "status": "Available",
+      "marks": [
+        "LastItems",
+        "Sale",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,4\"",
+        "Procesor: Qualcomm Snapdragon 675",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 1299,
+      "oldPrice": 1499,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/9/pr_2019_9_5_11_12_8_824_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/9/pr_2019_9_5_11_12_8_824_00.jpg"
+    },
+    {
+      "id": "507923",
+      "rating": 5.83,
+      "commentsCount": 6,
+      "ean": "SM-N970FZKDXEO",
+      "name": "Galaxy Note 10 N970F Dual SIM 8/256 Aura Black",
+      "producer": "Samsung",
+      "status": "Unavailable",
+      "marks": [
+        "Sale",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,3\"",
+        "Procesor: Samsung Exynos 9825",
+        "Pamięć: 256 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 3500 mAh"
+      ],
+      "price": 2999,
+      "oldPrice": 3999,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/8/pr_2019_8_8_9_48_11_571_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/8/pr_2019_8_8_9_48_11_571_00.jpg"
+    },
+    {
+      "id": "483717",
+      "rating": 5.89,
+      "commentsCount": 9,
+      "ean": "VOGUE-L29D Aurora blue",
+      "name": "P30 Pro 256GB Aurora niebieski ",
+      "producer": "Huawei",
+      "status": "Available",
+      "marks": [
+        "Sale",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,47\"",
+        "Procesor: Kirin 980",
+        "Pamięć: 256 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4200 mAh"
+      ],
+      "price": 2999,
+      "oldPrice": 3299,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/3/pr_2019_3_20_12_4_57_783_04.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/3/pr_2019_3_20_12_4_57_783_04.jpg"
+    },
+    {
+      "id": "541193",
+      "rating": 5.67,
+      "commentsCount": 6,
+      "ean": "SM-G988BZKDEUE",
+      "name": "Galaxy S20 Ultra G988F Dual SIM Cosmic Black 5G",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,9\"",
+        "Procesor: Samsung Exynos 990",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 5000 mAh"
+      ],
+      "price": 5999,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/2/pr_2020_2_11_8_24_20_241_05.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/2/pr_2020_2_11_8_24_20_241_05.jpg"
+    },
+    {
+      "id": "566034",
+      "rating": 6,
+      "commentsCount": 6,
+      "ean": "",
+      "name": "3L (2020) czarno-niebieski",
+      "producer": "Alcatel",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,22\"",
+        "Procesor: MediaTek MT6762R Helio P22",
+        "Pamięć: 64 GB",
+        "System: Android 10",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 599,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/5/pr_2020_5_15_13_24_5_105_06.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/5/pr_2020_5_15_13_24_5_105_06.jpg"
+    },
+    {
+      "id": "356588",
+      "rating": 6,
+      "commentsCount": 4,
+      "ean": "",
+      "name": "HAMMER 3 Dual SIM czarny",
+      "producer": "myPhone",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 2,4\"",
+        "Procesor: MediaTek MT6261",
+        "Pamięć: 32 MB",
+        "Bateria: 2000 mAh"
+      ],
+      "price": 189,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2017/7/pr_2017_7_10_9_7_38_485.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2017/7/pr_2017_7_10_9_7_38_485.jpg"
+    },
+    {
+      "id": "548438",
+      "rating": 5.86,
+      "commentsCount": 14,
+      "ean": "Arthur-L29 Midnight Black 51095DCE",
+      "name": "P40 Lite E czarny ",
+      "producer": "Huawei",
+      "status": "Available",
+      "marks": [
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,39\"",
+        "Procesor: Kirin 710F",
+        "Pamięć: 64 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 699,
+      "oldPrice": 999,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/2/pr_2020_2_28_10_27_47_768_08.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/2/pr_2020_2_28_10_27_47_768_08.jpg"
+    },
+    {
+      "id": "478665",
+      "rating": 6,
+      "commentsCount": 9,
+      "ean": "SM-G973FZGDXEO",
+      "name": "Galaxy S10 G973F Prism Green",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": [
+        "Sale",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Samsung Exynos 9820",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 3400 mAh"
+      ],
+      "price": 2999,
+      "oldPrice": 3299,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/2/pr_2019_2_19_14_24_25_862_06.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/2/pr_2019_2_19_14_24_25_862_06.jpg"
+    },
+    {
+      "id": "559797",
+      "rating": 6,
+      "commentsCount": 7,
+      "ean": "MXD02PM/A",
+      "name": "iPhone SE 128GB Black",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 4,7\"",
+        "Procesor: Apple A13 Bionic",
+        "Pamięć: 128 GB",
+        "System: iOS 13"
+      ],
+      "price": 2369,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_15_19_27_7_398_03.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_15_19_27_7_398_03.jpg"
+    },
+    {
+      "id": "552053",
+      "rating": 6,
+      "commentsCount": 4,
+      "ean": "RMX2001_4+128_blue",
+      "name": "6 4+128GB Comet Blue 90Hz",
+      "producer": "Realme",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,5\"",
+        "Procesor: MediaTek Helio G90T",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 4300 mAh"
+      ],
+      "price": 999,
+      "oldPrice": 1199,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/3/pr_2020_3_23_11_5_15_550_08.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/3/pr_2020_3_23_11_5_15_550_08.jpg"
+    },
+    {
+      "id": "461224",
+      "rating": 5.5,
+      "commentsCount": 10,
+      "ean": "TA-1105 DS 3/32 CEE PL B BLACK",
+      "name": "5.1 PLUS Dual SIM czarny",
+      "producer": "Nokia",
+      "status": "Available",
+      "marks": [
+        "Sale",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 5,8\"",
+        "Procesor: MediaTek MT6771 Helio P60",
+        "Pamięć: 32 GB",
+        "System: Android 8.1 Oreo",
+        "Bateria: 3060 mAh"
+      ],
+      "price": 599,
+      "oldPrice": 649,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2018/11/pr_2018_11_10_11_39_14_457_05.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2018/11/pr_2018_11_10_11_39_14_457_05.jpg"
+    },
+    {
+      "id": "519849",
+      "rating": 5.86,
+      "commentsCount": 22,
+      "ean": "",
+      "name": "Redmi Note 8 PRO 6/64GB Forest Green",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,53\"",
+        "Procesor: MediaTek Helio G90T",
+        "Pamięć: 64 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4500 mAh"
+      ],
+      "price": 999,
+      "oldPrice": 1099,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/10/pr_2019_10_1_14_16_9_565_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/10/pr_2019_10_1_14_16_9_565_00.jpg"
+    },
+    {
+      "id": "536262",
+      "rating": 5.9,
+      "commentsCount": 10,
+      "ean": "SM-A715FZBUXEO",
+      "name": "Galaxy A71 SM-A715F Blue",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,7\"",
+        "Procesor: Qualcomm Snapdragon 730",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 4500 mAh"
+      ],
+      "price": 1999,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/1/pr_2020_1_2_15_5_1_833_02.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/1/pr_2020_1_2_15_5_1_833_02.jpg"
+    },
+    {
+      "id": "483692",
+      "rating": 5.85,
+      "commentsCount": 20,
+      "ean": "ELLE-L29B Black",
+      "name": "P30 128GB Czarny",
+      "producer": "Huawei",
+      "status": "Available",
+      "marks": [
+        "Sale",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Kirin 980",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 3650 mAh"
+      ],
+      "price": 1999,
+      "oldPrice": 2699,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/3/pr_2019_3_20_10_42_1_721_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/3/pr_2019_3_20_10_42_1_721_00.jpg"
+    },
+    {
+      "id": "516873",
+      "rating": 5.71,
+      "commentsCount": 45,
+      "ean": "",
+      "name": "Redmi Note 8 PRO 6/128GB Mineral Grey",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,53\"",
+        "Procesor: MediaTek Helio G90T",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4500 mAh"
+      ],
+      "price": 1099,
+      "oldPrice": 1199,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/9/pr_2019_9_17_16_3_34_674_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/9/pr_2019_9_17_16_3_34_674_00.jpg"
+    },
+    {
+      "id": "541187",
+      "rating": 5.83,
+      "commentsCount": 6,
+      "ean": "SM-G980FZADEUE",
+      "name": "Galaxy S20 G980F Dual SIM Cosmic Grey",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,2\"",
+        "Procesor: Samsung Exynos 990",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 3949,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/2/pr_2020_2_11_8_22_38_184_05.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/2/pr_2020_2_11_8_22_38_184_05.jpg"
+    },
+    {
+      "id": "550562",
+      "rating": 6,
+      "commentsCount": 5,
+      "ean": "RMX1911_purple",
+      "name": "5 4+128 Crystal Purple ",
+      "producer": "Realme",
+      "status": "Available",
+      "marks": [
+        "Sale"
+      ],
+      "features": [
+        "Ekran: 6,5\"",
+        "Procesor: Qualcomm Snapdragon 665",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 5000 mAh"
+      ],
+      "price": 699,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/3/pr_2020_3_12_12_19_6_888_08.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/3/pr_2020_3_12_12_19_6_888_08.jpg"
+    },
+    {
+      "id": "516869",
+      "rating": 5.89,
+      "commentsCount": 27,
+      "ean": "",
+      "name": "Redmi Note 8 PRO 6/64GB Mineral Grey",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "Bestseller",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,53\"",
+        "Procesor: MediaTek Helio G90T",
+        "Pamięć: 64 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4500 mAh"
+      ],
+      "price": 999,
+      "oldPrice": 1099,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/9/pr_2019_9_17_16_3_34_674_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/9/pr_2019_9_17_16_3_34_674_00.jpg"
+    },
+    {
+      "id": "557616",
+      "rating": 5.91,
+      "commentsCount": 11,
+      "ean": "5011101010 (IN2023)",
+      "name": "8 Pro 8/128GB Onyx Black",
+      "producer": "OnePlus",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,78\"",
+        "Procesor: Qualcomm Snapdragon 865",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 4510 mAh"
+      ],
+      "price": 4199,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_10_7_18_23_139_10.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_10_7_18_23_139_10.jpg"
+    },
+    {
+      "id": "495028",
+      "rating": 5.85,
+      "commentsCount": 34,
+      "ean": "5011100648",
+      "name": "7 Pro 8/256GB Dual SIM Nebula Blue",
+      "producer": "OnePlus",
+      "status": "Unavailable",
+      "marks": null,
+      "features": [
+        "Ekran: 6,67\"",
+        "Procesor: Qualcomm Snapdragon 855",
+        "Pamięć: 256 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 2999,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/5/pr_2019_5_13_14_21_3_4_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/5/pr_2019_5_13_14_21_3_4_00.jpg"
+    },
+    {
+      "id": "586704",
+      "rating": 6,
+      "commentsCount": 3,
+      "ean": "RMX2185_3+32_grey",
+      "name": "C11 3+32GB Pepper Grey",
+      "producer": "Realme",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,52\"",
+        "Procesor: MediaTek Helio G35",
+        "Pamięć: 32 GB",
+        "System: Android 10",
+        "Bateria: 5000 mAh"
+      ],
+      "price": 499,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/8/pr_2020_8_20_8_41_10_482_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/8/pr_2020_8_20_8_41_10_482_00.jpg"
+    },
+    {
+      "id": "483711",
+      "rating": 5.82,
+      "commentsCount": 11,
+      "ean": "VOGUE-L29B Aurora blue",
+      "name": "P30 Pro 128GB Aurora niebieski",
+      "producer": "Huawei",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,47\"",
+        "Procesor: Kirin 980",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4200 mAh"
+      ],
+      "price": 2799,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/3/pr_2019_3_20_12_4_22_995_04.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/3/pr_2019_3_20_12_4_22_995_04.jpg"
+    },
+    {
+      "id": "515847",
+      "rating": 6,
+      "commentsCount": 4,
+      "ean": "MWHN2PM/A",
+      "name": "iPhone 11 Pro Max 512GB Space Gray",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,5\"",
+        "Procesor: Apple A13 Bionic",
+        "Pamięć: 512 GB",
+        "System: iOS 13",
+        "Bateria: 3500 mAh"
+      ],
+      "price": 7199,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/9/pr_2019_9_11_9_29_21_702_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/9/pr_2019_9_11_9_29_21_702_00.jpg"
+    },
+    {
+      "id": "483691",
+      "rating": 5.93,
+      "commentsCount": 15,
+      "ean": "ELLE-L29B Breathing Crystal",
+      "name": "P30 128GB Opal",
+      "producer": "Huawei",
+      "status": "Available",
+      "marks": [
+        "Sale",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Kirin 980",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 3650 mAh"
+      ],
+      "price": 2099,
+      "oldPrice": 2699,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/3/pr_2019_3_20_10_31_40_736_04.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/3/pr_2019_3_20_10_31_40_736_04.jpg"
+    },
+    {
+      "id": "519850",
+      "rating": 5.79,
+      "commentsCount": 28,
+      "ean": "",
+      "name": "Redmi Note 8 PRO 6/128GB Forest Green",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,53\"",
+        "Procesor: MediaTek Helio G90T",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4500 mAh"
+      ],
+      "price": 1099,
+      "oldPrice": 1199,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/10/pr_2019_10_1_14_16_9_565_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/10/pr_2019_10_1_14_16_9_565_00.jpg"
+    },
+    {
+      "id": "474173",
+      "rating": 6,
+      "commentsCount": 5,
+      "ean": "SM-G975FZGDXEO",
+      "name": "Galaxy S10+ G975F Prism Green",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": [
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,4\"",
+        "Procesor: Samsung Exynos 9820",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4100 mAh"
+      ],
+      "price": 3299,
+      "oldPrice": 3799,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/2/pr_2019_2_19_16_25_41_379_06.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/2/pr_2019_2_19_16_25_41_379_06.jpg"
+    },
+    {
+      "id": "583147",
+      "rating": 6,
+      "commentsCount": 4,
+      "ean": "99HASC007-00",
+      "name": "Desire 20 PRO 6/128GB Black",
+      "producer": "HTC",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,5\"",
+        "Procesor: Qualcomm Snapdragon 665",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 5000 mAh"
+      ],
+      "price": 1399,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/8/pr_2020_8_5_16_11_5_304_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/8/pr_2020_8_5_16_11_5_304_00.jpg"
+    },
+    {
+      "id": "515877",
+      "rating": 6,
+      "commentsCount": 3,
+      "ean": "MWC52PM/A",
+      "name": "iPhone 11 Pro 64GB Gold",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 5,8\"",
+        "Procesor: Apple A13 Bionic",
+        "Pamięć: 64 GB",
+        "System: iOS 13",
+        "Bateria: 3190 mAh"
+      ],
+      "price": 4549,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/9/pr_2019_9_11_9_21_31_289_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/9/pr_2019_9_11_9_21_31_289_00.jpg"
+    },
+    {
+      "id": "541189",
+      "rating": 6,
+      "commentsCount": 6,
+      "ean": "SM-G985FLBDEUE",
+      "name": "Galaxy S20+ G985F Dual SIM Cloud Blue",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,7\"",
+        "Procesor: Samsung Exynos 990",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 4500 mAh"
+      ],
+      "price": 4399,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/2/pr_2020_2_11_8_40_39_903_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/2/pr_2020_2_11_8_40_39_903_00.jpg"
+    },
+    {
+      "id": "448401",
+      "rating": 5.8,
+      "commentsCount": 5,
+      "ean": "MRY92PM/A",
+      "name": "iPhone Xr 128GB Black",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Apple A12 Bionic",
+        "Pamięć: 128 GB",
+        "System: iOS 12"
+      ],
+      "price": 3229,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2018/9/pr_2018_9_13_9_1_32_809_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2018/9/pr_2018_9_13_9_1_32_809_00.jpg"
+    },
+    {
+      "id": "548432",
+      "rating": 5.67,
+      "commentsCount": 9,
+      "ean": "Jenny-L21A Crush Green 51095CJX",
+      "name": "P40 Lite zielony",
+      "producer": "Huawei",
+      "status": "Available",
+      "marks": [
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,4\"",
+        "Procesor: Kirin 810",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 4200 mAh"
+      ],
+      "price": 999,
+      "oldPrice": 1599,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/2/pr_2020_2_28_9_54_18_562_08.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/2/pr_2020_2_28_9_54_18_562_08.jpg"
+    },
+    {
+      "id": "566386",
+      "rating": 5.58,
+      "commentsCount": 12,
+      "ean": "",
+      "name": "Mi Note 10 Lite 6/128GB Midnight Black",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,47\"",
+        "Procesor: Qualcomm Snapdragon 730G",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 5260 mAh"
+      ],
+      "price": 1599,
+      "oldPrice": 1699,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/5/pr_2020_5_14_8_34_52_381_08.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/5/pr_2020_5_14_8_34_52_381_08.jpg"
+    },
+    {
+      "id": "548428",
+      "rating": 5.93,
+      "commentsCount": 29,
+      "ean": "Jenny-L21A Midnight Black 51095CJV",
+      "name": "P40 Lite czarny",
+      "producer": "Huawei",
+      "status": "Available",
+      "marks": [
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,4\"",
+        "Procesor: Kirin 810",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 4200 mAh"
+      ],
+      "price": 999,
+      "oldPrice": 1599,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/2/pr_2020_2_28_9_58_32_142_03.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/2/pr_2020_2_28_9_58_32_142_03.jpg"
+    },
+    {
+      "id": "515878",
+      "rating": 6,
+      "commentsCount": 3,
+      "ean": "MWC62PM/A",
+      "name": "iPhone 11 Pro 64GB Midnight Green",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 5,8\"",
+        "Procesor: Apple A13 Bionic",
+        "Pamięć: 64 GB",
+        "System: iOS 13",
+        "Bateria: 3190 mAh"
+      ],
+      "price": 4549,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/9/pr_2019_9_11_9_22_23_263_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/9/pr_2019_9_11_9_22_23_263_00.jpg"
+    },
+    {
+      "id": "557853",
+      "rating": 6,
+      "commentsCount": 3,
+      "ean": "CPH2043",
+      "name": "Reno3 8/128GB biały",
+      "producer": "OPPO",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,4\"",
+        "Procesor: MediaTek MT6779 Helio P90",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 4025 mAh"
+      ],
+      "price": 1499,
+      "oldPrice": 1599,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_9_15_40_32_821_05.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_9_15_40_32_821_05.jpg"
+    },
+    {
+      "id": "474171",
+      "rating": 5.71,
+      "commentsCount": 24,
+      "ean": "SM-G973FZKDXEO",
+      "name": "Galaxy S10 G973F Prism Black",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": [
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Samsung Exynos 9820",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 3400 mAh"
+      ],
+      "price": 2999,
+      "oldPrice": 3299,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/2/pr_2019_2_19_14_20_33_894_06.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/2/pr_2019_2_19_14_20_33_894_06.jpg"
+    },
+    {
+      "id": "541186",
+      "rating": 6,
+      "commentsCount": 4,
+      "ean": "SM-G980FLBDEUE",
+      "name": "Galaxy S20 G980F Dual SIM Cloud Blue",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,2\"",
+        "Procesor: Samsung Exynos 990",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 3949,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/2/pr_2020_2_11_8_22_24_308_05.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/2/pr_2020_2_11_8_22_24_308_05.jpg"
+    },
+    {
+      "id": "536264",
+      "rating": 5.82,
+      "commentsCount": 11,
+      "ean": "SM-A715FZKUXEO",
+      "name": "Galaxy A71 SM-A715F Black",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,7\"",
+        "Procesor: Qualcomm Snapdragon 730",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 4500 mAh"
+      ],
+      "price": 1999,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/1/pr_2020_1_2_17_47_8_221_02.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/1/pr_2020_1_2_17_47_8_221_02.jpg"
+    },
+    {
+      "id": "557646",
+      "rating": 5.7,
+      "commentsCount": 46,
+      "ean": "SM-M215FZKUXEO",
+      "name": "Galaxy M21 SM-M215F Black",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,4\"",
+        "Procesor: Samsung Exynos 9611",
+        "Pamięć: 64 GB",
+        "System: Android 10",
+        "Bateria: 6000 mAh"
+      ],
+      "price": 999,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_29_9_31_34_907_04.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_29_9_31_34_907_04.jpg"
+    },
+    {
+      "id": "515857",
+      "rating": 6,
+      "commentsCount": 6,
+      "ean": "MWM02PM/A",
+      "name": "iPhone 11 128GB Black",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Apple A13 Bionic",
+        "Pamięć: 128 GB",
+        "System: iOS 13",
+        "Bateria: 3110 mAh"
+      ],
+      "price": 3599,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/9/pr_2019_9_11_8_52_21_131_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/9/pr_2019_9_11_8_52_21_131_00.jpg"
+    },
+    {
+      "id": "515837",
+      "rating": 6,
+      "commentsCount": 4,
+      "ean": "MWHH2PM/A",
+      "name": "iPhone 11 Pro Max 64GB Midnight Green",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,5\"",
+        "Procesor: Apple A13 Bionic",
+        "Pamięć: 64 GB",
+        "System: iOS 13",
+        "Bateria: 3500 mAh"
+      ],
+      "price": 5099,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/9/pr_2019_9_11_9_30_34_914_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/9/pr_2019_9_11_9_30_34_914_00.jpg"
+    },
+    {
+      "id": "560498",
+      "rating": 5.89,
+      "commentsCount": 9,
+      "ean": "PAHL0002PL (XT2045)",
+      "name": "Moto G8 4/64GB Neon Blue",
+      "producer": "Motorola",
+      "status": "Available",
+      "marks": [
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,4\"",
+        "Procesor: Qualcomm Snapdragon 665",
+        "Pamięć: 64 GB",
+        "System: Android 10",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 599,
+      "oldPrice": 699,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_20_12_37_18_442_10.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_20_12_37_18_442_10.jpg"
+    },
+    {
+      "id": "557618",
+      "rating": 5.86,
+      "commentsCount": 14,
+      "ean": "5011101014 (IN2023)",
+      "name": "8 Pro 12/256GB Ultramarine Blue",
+      "producer": "OnePlus",
+      "status": "Available",
+      "marks": [
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,78\"",
+        "Procesor: Qualcomm Snapdragon 865",
+        "Pamięć: 256 GB",
+        "System: Android 10",
+        "Bateria: 4510 mAh"
+      ],
+      "price": 4599,
+      "oldPrice": 4699,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_10_7_28_3_936_10.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_10_7_28_3_936_10.jpg"
+    },
+    {
+      "id": "519819",
+      "rating": 5.9,
+      "commentsCount": 49,
+      "ean": "5011100766",
+      "name": "7T Pro 8/256GB Dual SIM Haze Blue",
+      "producer": "OnePlus",
+      "status": "Available",
+      "marks": [
+        "LastItems",
+        "Sale"
+      ],
+      "features": [
+        "Ekran: 6,67\"",
+        "Procesor: Qualcomm Snapdragon 855 Plus",
+        "Pamięć: 256 GB",
+        "System: Android 10",
+        "Bateria: 4085 mAh"
+      ],
+      "price": 3199,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/8/pr_2020_8_12_7_26_38_379_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/8/pr_2020_8_12_7_26_38_379_00.jpg"
+    },
+    {
+      "id": "324765",
+      "rating": 5.78,
+      "commentsCount": 9,
+      "ean": "MN932PM/A",
+      "name": "iPhone 7 128GB Silver",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 4,7\"",
+        "Procesor: Apple A10 z koprocesorem M10",
+        "Pamięć: 128 GB",
+        "System: iOS 10",
+        "Bateria: 1960 mAh"
+      ],
+      "price": 1899,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2017/7/pr_2017_7_12_12_44_24_86.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2017/7/pr_2017_7_12_12_44_24_86.jpg"
+    },
+    {
+      "id": "448356",
+      "rating": 6,
+      "commentsCount": 11,
+      "ean": "MRY42PM/A",
+      "name": "iPhone Xr 64GB Black",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Apple A12 Bionic",
+        "Pamięć: 64 GB",
+        "System: iOS 12"
+      ],
+      "price": 2949,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2018/9/pr_2018_9_13_9_1_32_809_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2018/9/pr_2018_9_13_9_1_32_809_00.jpg"
+    },
+    {
+      "id": "543494",
+      "rating": 5.93,
+      "commentsCount": 14,
+      "ean": "PAHF0005PL (XT2041-3)",
+      "name": "Moto G8 Power 4/64GB Dual SIM Capri Blue",
+      "producer": "Motorola",
+      "status": "Available",
+      "marks": [
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,4\"",
+        "Procesor: Qualcomm Snapdragon 665",
+        "Pamięć: 64 GB",
+        "System: Android 10",
+        "Bateria: 5000 mAh"
+      ],
+      "price": 799,
+      "oldPrice": 899,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/2/pr_2020_2_4_11_35_31_132_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/2/pr_2020_2_4_11_35_31_132_00.jpg"
+    },
+    {
+      "id": "527780",
+      "rating": 5.57,
+      "commentsCount": 7,
+      "ean": "",
+      "name": "Redmi Note 8T 3/32GB Moonshadow Grey",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "LastItems",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,3\"",
+        "Procesor: Qualcomm Snapdragon 665",
+        "Pamięć: 32 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 649,
+      "oldPrice": 799,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/11/pr_2019_11_13_8_55_59_653_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/11/pr_2019_11_13_8_55_59_653_00.jpg"
+    },
+    {
+      "id": "362999",
+      "rating": 5.63,
+      "commentsCount": 16,
+      "ean": "TA-1030 NV PL DK_BLUE",
+      "name": "3310 Dual SIM granatowy",
+      "producer": "Nokia",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 2,4\"",
+        "Pamięć: 16 MB",
+        "System: Nokia Series 30+",
+        "Bateria: 1200 mAh"
+      ],
+      "price": 219,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2017/7/pr_2017_7_10_10_55_1_624.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2017/7/pr_2017_7_10_10_55_1_624.jpg"
+    },
+    {
+      "id": "557848",
+      "rating": 6,
+      "commentsCount": 6,
+      "ean": "CPH2043",
+      "name": "Reno3 8/128GB czarny",
+      "producer": "OPPO",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,4\"",
+        "Procesor: MediaTek MT6779 Helio P90",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 4025 mAh"
+      ],
+      "price": 1499,
+      "oldPrice": 1599,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_9_15_42_12_899_06.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_9_15_42_12_899_06.jpg"
+    },
+    {
+      "id": "583125",
+      "rating": 5.8,
+      "commentsCount": 5,
+      "ean": "",
+      "name": "Redmi 9A 2/32GB Grey",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,53\"",
+        "Procesor: MediaTek Helio G25",
+        "Pamięć: 32 GB",
+        "System: Android 10",
+        "Bateria: 5000 mAh"
+      ],
+      "price": 399,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/8/pr_2020_8_5_9_26_31_149_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/8/pr_2020_8_5_9_26_31_149_00.jpg"
+    },
+    {
+      "id": "515849",
+      "rating": 5.8,
+      "commentsCount": 5,
+      "ean": "MWLU2PM/A",
+      "name": "iPhone 11 64GB White",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Apple A13 Bionic",
+        "Pamięć: 64 GB",
+        "System: iOS 13",
+        "Bateria: 3110 mAh"
+      ],
+      "price": 3349,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/9/pr_2019_9_11_9_11_0_705_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/9/pr_2019_9_11_9_11_0_705_00.jpg"
+    },
+    {
+      "id": "515882",
+      "rating": 6,
+      "commentsCount": 3,
+      "ean": "MWCC2PM/A",
+      "name": "iPhone 11 Pro 256GB Midnight Green",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 5,8\"",
+        "Procesor: Apple A13 Bionic",
+        "Pamięć: 256 GB",
+        "System: iOS 13",
+        "Bateria: 3190 mAh"
+      ],
+      "price": 5449,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/9/pr_2019_9_11_9_16_49_408_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/9/pr_2019_9_11_9_16_49_408_00.jpg"
+    },
+    {
+      "id": "554545",
+      "rating": 6,
+      "commentsCount": 9,
+      "ean": "5028Y GREEN",
+      "name": "1S (2020) NFC  zielony",
+      "producer": "Alcatel",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,22\"",
+        "Procesor: MediaTek MT6762 Helio P22",
+        "Pamięć: 32 GB",
+        "System: Android 10",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 449,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_8_13_15_19_802_02.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_8_13_15_19_802_02.jpg"
+    },
+    {
+      "id": "553310",
+      "rating": 5.83,
+      "commentsCount": 6,
+      "ean": "Elsa-N29D Silver Frost",
+      "name": "P40 Pro 8/256GB srebrny",
+      "producer": "Huawei",
+      "status": "Available",
+      "marks": [
+        "Sale"
+      ],
+      "features": [
+        "Ekran: 6,58\"",
+        "Procesor: Kirin 990",
+        "Pamięć: 256 GB",
+        "System: Android 10",
+        "Bateria: 4200 mAh"
+      ],
+      "price": 3799,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/3/pr_2020_3_26_12_38_19_128_03.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/3/pr_2020_3_26_12_38_19_128_03.jpg"
+    },
+    {
+      "id": "496063",
+      "rating": 6,
+      "commentsCount": 4,
+      "ean": "SM-A202FZKDXEO",
+      "name": "Galaxy A20e black ",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 5,8\"",
+        "Procesor: Samsung Exynos 7884",
+        "Pamięć: 32 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 3000 mAh"
+      ],
+      "price": 749,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/3/pr_2020_3_23_9_42_56_422_01.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/3/pr_2020_3_23_9_42_56_422_01.jpg"
+    },
+    {
+      "id": "559796",
+      "rating": 6,
+      "commentsCount": 14,
+      "ean": "MX9R2PM/A",
+      "name": "iPhone SE 64GB Black",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 4,7\"",
+        "Procesor: Apple A13 Bionic",
+        "Pamięć: 64 GB",
+        "System: iOS 13"
+      ],
+      "price": 2099,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_15_19_27_24_726_03.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_15_19_27_24_726_03.jpg"
+    },
+    {
+      "id": "448352",
+      "rating": 6,
+      "commentsCount": 4,
+      "ean": "MRY72PM/A",
+      "name": "iPhone Xr 64GB Yellow",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Apple A12 Bionic",
+        "Pamięć: 64 GB",
+        "System: iOS 12"
+      ],
+      "price": 2949,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2018/9/pr_2018_9_13_9_0_38_261_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2018/9/pr_2018_9_13_9_0_38_261_00.jpg"
+    },
+    {
+      "id": "525807",
+      "rating": 5.67,
+      "commentsCount": 9,
+      "ean": "",
+      "name": "Redmi 8 4/64GB Sapphire Blue",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,22\"",
+        "Procesor: Qualcomm Snapdragon 439",
+        "Pamięć: 64 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 5000 mAh"
+      ],
+      "price": 699,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/10/pr_2019_10_31_10_8_9_273_06.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/10/pr_2019_10_31_10_8_9_273_06.jpg"
+    },
+    {
+      "id": "527807",
+      "rating": 6,
+      "commentsCount": 5,
+      "ean": "",
+      "name": "Mi Note 10 6/128GB Glacier White ",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,47\"",
+        "Procesor: Qualcomm Snapdragon 730G",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 5260 mAh"
+      ],
+      "price": 2199,
+      "oldPrice": 2499,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/11/pr_2019_11_13_9_57_40_358_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/11/pr_2019_11_13_9_57_40_358_00.jpg"
+    },
+    {
+      "id": "553319",
+      "rating": 6,
+      "commentsCount": 3,
+      "ean": "Anna-N29CB Silver Frost",
+      "name": "P40 8/128GB srebrny ",
+      "producer": "Huawei",
+      "status": "Available",
+      "marks": [
+        "Sale"
+      ],
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Kirin 990",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 3800 mAh"
+      ],
+      "price": 2999,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/3/pr_2020_3_25_13_40_18_199_09.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/3/pr_2020_3_25_13_40_18_199_09.jpg"
+    },
+    {
+      "id": "516870",
+      "rating": 6,
+      "commentsCount": 6,
+      "ean": "",
+      "name": "Redmi Note 8 PRO 6/64GB Pearl White",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,53\"",
+        "Procesor: MediaTek Helio G90T",
+        "Pamięć: 64 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4500 mAh"
+      ],
+      "price": 999,
+      "oldPrice": 1099,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/9/pr_2019_9_17_16_3_9_544_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/9/pr_2019_9_17_16_3_9_544_00.jpg"
+    },
+    {
+      "id": "559792",
+      "rating": 6,
+      "commentsCount": 4,
+      "ean": "MX9U2PM/A",
+      "name": "iPhone SE 64GB (PRODUCT)Red",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 4,7\"",
+        "Procesor: Apple A13 Bionic",
+        "Pamięć: 64 GB",
+        "System: iOS 13"
+      ],
+      "price": 2099,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_15_19_23_52_880_03.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_15_19_23_52_880_03.jpg"
+    },
+    {
+      "id": "550577",
+      "rating": 6,
+      "commentsCount": 16,
+      "ean": "RMX1931_12+256_blue",
+      "name": "X2 Pro Neptune Blue 12+256 90Hz",
+      "producer": "Realme",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,5\"",
+        "Procesor: Qualcomm Snapdragon 855 Plus",
+        "Pamięć: 256 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 2299,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/3/pr_2020_3_12_13_14_32_541_08.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/3/pr_2020_3_12_13_14_32_541_08.jpg"
+    },
+    {
+      "id": "449081",
+      "rating": 6,
+      "commentsCount": 5,
+      "ean": "MRYA2PM/A",
+      "name": "iPhone Xr 64GB Blue",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Apple A12 Bionic",
+        "Pamięć: 64 GB",
+        "System: iOS 12"
+      ],
+      "price": 2949,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2018/9/pr_2018_9_13_9_3_4_827_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2018/9/pr_2018_9_13_9_3_4_827_00.jpg"
+    },
+    {
+      "id": "541191",
+      "rating": 5.86,
+      "commentsCount": 7,
+      "ean": "SM-G985FZKDEUE",
+      "name": "Galaxy S20+ G985F Dual SIM Cosmic Black",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,7\"",
+        "Procesor: Samsung Exynos 990",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 4500 mAh"
+      ],
+      "price": 4399,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/2/pr_2020_2_11_8_29_55_187_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/2/pr_2020_2_11_8_29_55_187_00.jpg"
+    },
+    {
+      "id": "527785",
+      "rating": 5.75,
+      "commentsCount": 24,
+      "ean": "",
+      "name": "Redmi Note 8T 4/64GB Starscape Blue",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "Sale",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,3\"",
+        "Procesor: Qualcomm Snapdragon 665",
+        "Pamięć: 64 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 699,
+      "oldPrice": 899,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/11/pr_2019_11_13_9_13_1_45_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/11/pr_2019_11_13_9_13_1_45_00.jpg"
+    },
+    {
+      "id": "559800",
+      "rating": 6,
+      "commentsCount": 3,
+      "ean": "MXD12PM/A",
+      "name": "iPhone SE 128GB White",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 4,7\"",
+        "Procesor: Apple A13 Bionic",
+        "Pamięć: 128 GB",
+        "System: iOS 13"
+      ],
+      "price": 2349,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_15_19_28_8_376_03.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_15_19_28_8_376_03.jpg"
+    },
+    {
+      "id": "495029",
+      "rating": 5.87,
+      "commentsCount": 46,
+      "ean": "5011100649",
+      "name": "7 Pro 12/256GB Dual SIM Nebula Blue",
+      "producer": "OnePlus",
+      "status": "Unavailable",
+      "marks": null,
+      "features": [
+        "Ekran: 6,67\"",
+        "Procesor: Qualcomm Snapdragon 855",
+        "Pamięć: 256 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 3499,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/5/pr_2019_5_13_14_21_3_4_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/5/pr_2019_5_13_14_21_3_4_00.jpg"
+    },
+    {
+      "id": "516871",
+      "rating": 5.89,
+      "commentsCount": 9,
+      "ean": "",
+      "name": "Redmi Note 8 PRO 6/64GB Blue",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,53\"",
+        "Procesor: MediaTek Helio G90T",
+        "Pamięć: 64 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4500 mAh"
+      ],
+      "price": 999,
+      "oldPrice": 1099,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_23_13_4_9_334_08.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_23_13_4_9_334_08.jpg"
+    },
+    {
+      "id": "543211",
+      "rating": 5.93,
+      "commentsCount": 30,
+      "ean": "PAHF0004PL (XT2041-3)",
+      "name": "Moto G8 Power 4/64GB Dual SIM Smoke Black",
+      "producer": "Motorola",
+      "status": "Available",
+      "marks": [
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,4\"",
+        "Procesor: Qualcomm Snapdragon 665",
+        "Pamięć: 64 GB",
+        "System: Android 10",
+        "Bateria: 5000 mAh"
+      ],
+      "price": 799,
+      "oldPrice": 899,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/2/pr_2020_2_4_11_35_51_165_01.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/2/pr_2020_2_4_11_35_51_165_01.jpg"
+    },
+    {
+      "id": "552049",
+      "rating": 6,
+      "commentsCount": 3,
+      "ean": "RMX2001_4+64_blue",
+      "name": "6 4+64GB Comet Blue 90Hz",
+      "producer": "Realme",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,5\"",
+        "Procesor: MediaTek Helio G90T",
+        "Pamięć: 64 GB",
+        "System: Android 10",
+        "Bateria: 4300 mAh"
+      ],
+      "price": 999,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/3/pr_2020_3_23_11_5_15_550_08.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/3/pr_2020_3_23_11_5_15_550_08.jpg"
+    },
+    {
+      "id": "495027",
+      "rating": 6,
+      "commentsCount": 4,
+      "ean": "5011100647",
+      "name": "7 Pro 8/256GB Dual SIM Almond",
+      "producer": "OnePlus",
+      "status": "Unavailable",
+      "marks": null,
+      "features": [
+        "Ekran: 6,67\"",
+        "Procesor: Qualcomm Snapdragon 855",
+        "Pamięć: 256 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 2999,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/5/pr_2019_5_13_14_13_41_502_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/5/pr_2019_5_13_14_13_41_502_00.jpg"
+    },
+    {
+      "id": "516874",
+      "rating": 5.55,
+      "commentsCount": 11,
+      "ean": "",
+      "name": "Redmi Note 8 PRO 6/128GB Pearl White",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,53\"",
+        "Procesor: MediaTek Helio G90T",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4500 mAh"
+      ],
+      "price": 1099,
+      "oldPrice": 1199,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/9/pr_2019_9_17_16_3_9_544_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/9/pr_2019_9_17_16_3_9_544_00.jpg"
+    },
+    {
+      "id": "324783",
+      "rating": 6,
+      "commentsCount": 11,
+      "ean": "MN912PM/A",
+      "name": "iPhone 7 32GB Rose Gold",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 4,7\"",
+        "Procesor: Apple A10 z koprocesorem M10",
+        "Pamięć: 32 GB",
+        "System: iOS 10",
+        "Bateria: 1960 mAh"
+      ],
+      "price": 1529,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2017/7/pr_2017_7_12_15_24_12_488.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2017/7/pr_2017_7_12_15_24_12_488.jpg"
+    },
+    {
+      "id": "543217",
+      "rating": 6,
+      "commentsCount": 7,
+      "ean": "PAHB0003PL (XT2029-2)",
+      "name": "Moto E6 Play 2/32GB Dual SIM Steel Black",
+      "producer": "Motorola",
+      "status": "Available",
+      "marks": [
+        "LastItems"
+      ],
+      "features": [
+        "Ekran: 5,5\"",
+        "Procesor: MediaTek MT6739",
+        "Pamięć: 32 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 3000 mAh"
+      ],
+      "price": 449,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/1/pr_2020_1_31_14_33_14_103_05.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/1/pr_2020_1_31_14_33_14_103_05.jpg"
+    },
+    {
+      "id": "516875",
+      "rating": 5.82,
+      "commentsCount": 11,
+      "ean": "",
+      "name": "Redmi Note 8 PRO 6/128GB Blue",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,53\"",
+        "Procesor: MediaTek Helio G90T",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4500 mAh"
+      ],
+      "price": 1099,
+      "oldPrice": 1199,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_23_13_4_33_39_08.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_23_13_4_33_39_08.jpg"
+    },
+    {
+      "id": "543496",
+      "rating": 5.8,
+      "commentsCount": 5,
+      "ean": "PAHF0005PL (XT2041-3) + SDCS2/64GB",
+      "name": "Moto G8 Power 4/64GB Dual SIM Capri Blue + 64GB",
+      "producer": "Motorola",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,4\"",
+        "Procesor: Qualcomm Snapdragon 665",
+        "Pamięć: 64 GB + 64 GB karta pamięci",
+        "System: Android 10",
+        "Bateria: 5000 mAh"
+      ],
+      "price": 824,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/5/pr_2020_5_21_11_45_41_369_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/5/pr_2020_5_21_11_45_41_369_00.jpg"
+    },
+    {
+      "id": "527789",
+      "rating": 5.88,
+      "commentsCount": 8,
+      "ean": "",
+      "name": "Redmi Note 8T 4/128GB Starscape Blue ",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,3\"",
+        "Procesor: Qualcomm Snapdragon 665",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 999,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/11/pr_2019_11_13_9_13_1_45_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/11/pr_2019_11_13_9_13_1_45_00.jpg"
+    },
+    {
+      "id": "559799",
+      "rating": 6,
+      "commentsCount": 5,
+      "ean": "MX9T2PM/A",
+      "name": "iPhone SE 64GB White",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 4,7\"",
+        "Procesor: Apple A13 Bionic",
+        "Pamięć: 64 GB",
+        "System: iOS 13"
+      ],
+      "price": 2099,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_15_19_28_8_376_03.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_15_19_28_8_376_03.jpg"
+    },
+    {
+      "id": "566035",
+      "rating": 6,
+      "commentsCount": 4,
+      "ean": "",
+      "name": "3L (2020) szary",
+      "producer": "Alcatel",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,22\"",
+        "Procesor: MediaTek MT6762R Helio P22",
+        "Pamięć: 64 GB",
+        "System: Android 10",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 599,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/5/pr_2020_5_15_13_27_2_153_07.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/5/pr_2020_5_15_13_27_2_153_07.jpg"
+    },
+    {
+      "id": "515843",
+      "rating": 6,
+      "commentsCount": 16,
+      "ean": "MWLT2PM/A",
+      "name": "iPhone 11 64GB Black",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Apple A13 Bionic",
+        "Pamięć: 64 GB",
+        "System: iOS 13",
+        "Bateria: 3110 mAh"
+      ],
+      "price": 3349,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/9/pr_2019_9_11_9_8_14_748_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/9/pr_2019_9_11_9_8_14_748_00.jpg"
+    },
+    {
+      "id": "566373",
+      "rating": 5.6,
+      "commentsCount": 10,
+      "ean": "",
+      "name": "Redmi Note 9 Pro 6/128GB Grey",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,67\"",
+        "Procesor: Qualcomm Snapdragon 720G",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 5020 mAh"
+      ],
+      "price": 1349,
+      "oldPrice": 1399,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/5/pr_2020_5_13_15_20_2_903_10.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/5/pr_2020_5_13_15_20_2_903_10.jpg"
+    },
+    {
+      "id": "566374",
+      "rating": 5.83,
+      "commentsCount": 6,
+      "ean": "",
+      "name": "Redmi Note 9 Pro 6/128GB Tropical Green",
+      "producer": "Xiaomi",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "Bestseller",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,67\"",
+        "Procesor: Qualcomm Snapdragon 720G",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 5020 mAh"
+      ],
+      "price": 1349,
+      "oldPrice": 1399,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/5/pr_2020_5_13_15_13_26_895_10.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/5/pr_2020_5_13_15_13_26_895_10.jpg"
+    },
+    {
+      "id": "448355",
+      "rating": 6,
+      "commentsCount": 6,
+      "ean": "MRY52PM/A",
+      "name": "iPhone Xr 64GB White",
+      "producer": "Apple",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Apple A12 Bionic",
+        "Pamięć: 64 GB",
+        "System: iOS 12"
+      ],
+      "price": 2949,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2018/9/pr_2018_9_13_9_9_29_650_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2018/9/pr_2018_9_13_9_9_29_650_00.jpg"
+    },
+    {
+      "id": "343354",
+      "rating": 6,
+      "commentsCount": 7,
+      "ean": "RM-1190 BLACK",
+      "name": "150 Dual SIM czarny",
+      "producer": "Nokia",
+      "status": "Available",
+      "marks": null,
+      "features": [
+        "Ekran: 2,4\"",
+        "System: Nokia Series 30+",
+        "Bateria: 1020 mAh"
+      ],
+      "price": 138,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2017/7/pr_2017_7_10_11_59_18_822.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2017/7/pr_2017_7_10_11_59_18_822.jpg"
+    },
+    {
+      "id": "474172",
+      "rating": 5.58,
+      "commentsCount": 12,
+      "ean": "SM-G973FZWDXEO",
+      "name": "Galaxy S10 G973F Prism White",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": [
+        "Sale",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,1\"",
+        "Procesor: Samsung Exynos 9820",
+        "Pamięć: 128 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 3400 mAh"
+      ],
+      "price": 2999,
+      "oldPrice": 3299,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/2/pr_2019_2_19_14_29_12_688_06.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/2/pr_2019_2_19_14_29_12_688_06.jpg"
+    },
+    {
+      "id": "557640",
+      "rating": 6,
+      "commentsCount": 17,
+      "ean": "SM-M215FZBUXEO",
+      "name": "Galaxy M21 SM-M215F Blue",
+      "producer": "Samsung",
+      "status": "Available",
+      "marks": [
+        "Bestseller"
+      ],
+      "features": [
+        "Ekran: 6,4\"",
+        "Procesor: Samsung Exynos 9611",
+        "Pamięć: 64 GB",
+        "System: Android 10",
+        "Bateria: 6000 mAh"
+      ],
+      "price": 999,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_29_9_41_51_395_00.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_29_9_41_51_395_00.jpg"
+    },
+    {
+      "id": "557852",
+      "rating": 6,
+      "commentsCount": 12,
+      "ean": "CPH2043",
+      "name": "Reno3 8/128GB niebieski ",
+      "producer": "OPPO",
+      "status": "Available",
+      "marks": [
+        "Promotion",
+        "CrossedPrice"
+      ],
+      "features": [
+        "Ekran: 6,4\"",
+        "Procesor: MediaTek MT6779 Helio P90",
+        "Pamięć: 128 GB",
+        "System: Android 10",
+        "Bateria: 4025 mAh"
+      ],
+      "price": 1499,
+      "oldPrice": 1599,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2020/4/pr_2020_4_9_15_44_56_985_05.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2020/4/pr_2020_4_9_15_44_56_985_05.jpg"
+    },
+    {
+      "id": "495026",
+      "rating": 6,
+      "commentsCount": 9,
+      "ean": "5011100646",
+      "name": "7 Pro 8/256GB Dual SIM Mirror Gray",
+      "producer": "OnePlus",
+      "status": "Unavailable",
+      "marks": null,
+      "features": [
+        "Ekran: 6,67\"",
+        "Procesor: Qualcomm Snapdragon 855",
+        "Pamięć: 256 GB",
+        "System: Android 9.0 Pie",
+        "Bateria: 4000 mAh"
+      ],
+      "price": 2999,
+      "oldPrice": null,
+      "thumbnail": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-small,,2019/5/pr_2019_5_13_13_51_40_636_06.jpg",
+      "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-large,,2019/5/pr_2019_5_13_13_51_40_636_06.jpg"
+    }
+  ]
+}
