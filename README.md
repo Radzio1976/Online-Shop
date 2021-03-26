@@ -1,3 +1,5 @@
+# Online-Shop
+
 1. Open CMD or terminal on your code editor
 
 2. Download the repository on your computer using the command:
@@ -10,8 +12,12 @@
 
 ### `npm install`
 
-5. After install npm modules run app using command:
+5. After install npm modules run json-server using command:
+
+### `json-server --watch products.json`
+
+6. After run json-sever open second terminal and run app using command:
 
 ### `npm start`
 
-6. After start application open http://localhost:3000 to view it in the browser.
+6. After start application open http://localhost:3001 to view it in the browser.
