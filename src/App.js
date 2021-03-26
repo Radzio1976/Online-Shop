@@ -55,36 +55,39 @@ class App extends react.Component {
     })
   }
 
-  changeLimit = (value) => {
+  changeLimit = () => {
+    const {limit} = this.state;
+
     this.setState({
         paginationCounter: 1,
         firstProduct: 0,
-        lastProduct: value === "16" ? 15 : value === "32" ? 31 : value === "64" ? 63 : this.state.lastProduct
+        lastProduct: limit === "16" ? 15 : limit === "32" ? 31 : limit === "64" ? 63 : this.state.lastProduct
     })
   }
 
-  changeOrderBy = (value) => {
+  changeOrderBy = () => {
+    const {orderBy} = this.state;
     let products = this.state.mainBaseOfProducts;
 
-    if (value === "Price 0-9") {
+    if (orderBy === "Price 0-9") {
       products.sort((a, b) => {
           return parseFloat(Number(a.price)) - parseFloat(Number(b.price))
       })
     }
 
-    if (value === "Price 9-0") {
+    if (orderBy === "Price 9-0") {
       products.sort((a, b) => {
           return parseFloat(Number(b.price)) - parseFloat(Number(a.price))
       })
     }
 
-    if (value === "Name A-Z") {
+    if (orderBy === "Name A-Z") {
       products.sort((a, b) => {
           return a.producer > b.producer ? 1 : -1
       })
     }
 
-    if (value === "Name Z-A") {
+    if (orderBy === "Name Z-A") {
       products.sort((a, b) => {
           return b.producer > a.producer ? 1 : -1
       })
@@ -111,8 +114,8 @@ class App extends react.Component {
       [key]: value
     }, () => {
       this.getCurrentKey(key)
-      this.changeLimit(value)
-      this.changeOrderBy(value)
+      this.changeLimit()
+      this.changeOrderBy()
       this.changeRestOfSorts()
   }) 
   }
@@ -187,7 +190,6 @@ class App extends react.Component {
     })
 
     const uniqueProducers = [...new Set(producersNames)]
-    console.log(uniqueProducers)
     return uniqueProducers.sort();
   }
 
@@ -372,8 +374,8 @@ badgesBackground = (mark) => {
           <BrowserRouter>
             <Nav />
               <Switch>
-                <Route path='/' exact component={() => <Home />} />
-                <Route path='/cart' component={() => <Cart />} />
+                <Route path='/' exact component={Home} />
+                <Route path='/cart' component={Cart} />
                 <Route path='/registration' component={Registration} />
               </Switch>
           </BrowserRouter>
