@@ -12,12 +12,16 @@
 
 ### `npm install`
 
-5. After install npm modules run json-server using command:
+5. After install npm modules open folder with database using command:
+
+### `cd src/database`
+
+6. Next run json-server using command:
 
 ### `json-server --watch products.json`
 
-6. After run json-sever open second terminal and run app using command:
+7. After run json-sever open second terminal and run app using command:
 
 ### `npm start`
 
-6. After start application open http://localhost:3001 to view it in the browser.
+8. After start application open http://localhost:3001 to view it in the browser.
